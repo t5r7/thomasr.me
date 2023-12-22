@@ -2,8 +2,7 @@ title: ThomasR.me
 description: ✌🏻
 image: /static/img/blondtommodrawing.jpg
 
-future: true
-baseurl: "/"
+baseurl: "" # no trailing slash
 url: https://thomasr.me
 locale: en_GB
 
@@ -16,7 +15,8 @@ sass:
 highlighter: rouge
 
 compress_html:
-  blanklines: true
+  blanklines: false
+  endings: all
   comments: "all"
   ignore:
     envs: ["development"]
