@@ -12,15 +12,11 @@
 }
 
 :root {
-    // tailwind "stone" is default, neutral
-    --cDarkest: #1c1917; // 900
-    --cDark: #44403C; // 700
-    --c: #0EA5E9; // sky 300
-    @include in-light-mode() {
-        --c: #0369A1; // sky 600
-    }
-    --cLight: #E7E5E4; // 200 
-    --cLightest: #FAFAF9; // warm grey 50
+    --cDarkest: hsl(180, 40%, 5%);
+    --cDark: hsl(180, 50%, 25%);
+    --c: hsl(180, 50%, 40%);
+    --cLight: hsl(180, 50%, 75%);
+    --cLightest: hsl(180, 40%, 95%);
 
     --width: 40em;
 
@@ -28,11 +24,11 @@
 	--fonts-fancy: 'Libre Baskerville', 'Georgia', 'Times New Roman', serif;
 }
 
-$cDarkest: var(--cDarkest, #1c1917);
-$cDark: var(--cDark, #44403C);
-$c: var(--c, #0EA5E9);
-$cLight: var(--cLight, #E7E5E4);
-$cLightest: var(--cLightest, #FAFAF9);
+$cDarkest: var(--cDarkest);
+$cDark: var(--cDark);
+$c: var(--c);
+$cLight: var(--cLight);
+$cLightest: var(--cLightest);
 
 $fonts: var(--fonts, sans-serif);
 $fonts-fancy: var(--fonts-fancy, serif);

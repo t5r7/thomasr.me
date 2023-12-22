@@ -17,10 +17,11 @@ header#home-header {
 		span#js-greeting {
 			font-family: $fonts-fancy;
 			font-style: italic;
+			font-weight: 400;
 		}
 
 		span#pronouns {
-			font-size: 0.5em;
+			font-size: 40%;
 			color: $cLightest;
 			font-weight: 400;
 

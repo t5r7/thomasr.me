@@ -15,29 +15,37 @@ function setColour(hue) {
 	localStorage.setItem("last-colour", hue); 
 	document.querySelector('meta[name="theme-color"]').content = `${hslToHex(hue, 40, 50)}`;
 
-	setCssAccent("Darkest", hslToHex(hue, 40, 5));
-	setCssAccent("Dark", hslToHex(hue, 50, 15));
-	setCssAccent("Light", hslToHex(hue, 50, 75));
-	setCssAccent("Lightest", hslToHex(hue, 35, 95));
-	setCssAccent("", hslToHex(hue, 50, 45));
+	setCssAccent("Darkest", `hsl(${hue}, 40%, 5%)`);
+	setCssAccent("Dark", `hsl(${hue}, 50%, 25%)`);
+	setCssAccent("", `hsl(${hue}, 50%, 40%)`);
+	setCssAccent("Light", `hsl(${hue}, 50%, 75%)`);
+	setCssAccent("Lightest", `hsl(${hue}, 40%, 95%)`);
 
 	document.querySelector("html").style["visibility"] = "visible";
 }
 
-// Thank you, icl7126
-// https://stackoverflow.com/a/44134328/6325767
+// thanks chatgpt:
 function hslToHex(h, s, l) {
+	h /= 360;
+	s /= 100;
 	l /= 100;
-	const a = s * Math.min(l, 1 - l) / 100;
-	const f = n => {
-		const k = (n + h / 30) % 12;
-		const color = l - a * Math.max(Math.min(k - 3, 9 - k, 1), -1);
-		return Math.round(255 * color).toString(16).padStart(2, "0");   // convert to Hex and prefix "0" if needed
-	};
-	return `#${f(0)}${f(8)}${f(4)}`;
+
+	const toHex = (c) => Math.round(c * 255).toString(16).padStart(2, '0');
+
+	const [r, g, b] = [h + 1 / 3, h, h - 1 / 3].map((q) => {
+		if (q < 0) q += 1;
+		if (q > 1) q -= 1;
+		return q < 1 / 6 ? l + (s - l * s) * 6 * q :
+			q < 1 / 2 ? s < 0.5 ? l + s : l + (1 - l) * s * 6 * (1 / 2 - q) :
+				q < 2 / 3 ? s < 0.5 ? l + s * (1 - l) * 6 * (q - 1 / 2) : l - (1 - l) * s * 6 * (q - 1 / 2) :
+					s < 0.5 ? l - (1 - l) * s * 6 * (2 / 3 - q) : l + s;
+
+	});
+
+	return `#${toHex(r)}${toHex(g)}${toHex(b)}`;
 }
 
-async function randomAccent() {
+function randomAccent() {
 	const lastColour = localStorage.getItem("last-colour");
 
 	// if last colour doesn't exist
