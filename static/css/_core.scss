@@ -2,7 +2,8 @@ html {
 	visibility: hidden;
 }
 
-html, body {
+html,
+body {
 	margin: 0;
 	padding: 0;
 }
@@ -10,7 +11,7 @@ html, body {
 body {
 	color: $cLightest;
 	background-color: $cDarkest;
-	
+
 	@include in-light-mode() {
 		color: $cDarkest;
 		background-color: $cLightest;
@@ -38,9 +39,10 @@ a[href]:not(.butt) {
 	font-weight: 700;
 	border-bottom: 0.2em solid $c;
 
-	&:hover, &:focus {
+	&:hover,
+	&:focus {
 		border-bottom-color: $cLight;
-	
+
 		@include in-light-mode() {
 			border-bottom-color: $cDark;
 		}
@@ -72,7 +74,8 @@ a[href].butt {
 
 	transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
 
-	&:hover, &:focus {
+	&:hover,
+	&:focus {
 		background-color: $cLightest;
 		color: $cDarkest;
 
@@ -104,15 +107,15 @@ hr {
 // from tailwind
 // https://tailwindcss.com/docs/screen-readers
 .sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border-width: 0;
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	white-space: nowrap;
+	border-width: 0;
 }
 
 main {
@@ -126,7 +129,11 @@ main {
 }
 
 article {
-	h1, h2, h3, h4, h5 {
+	h1,
+	h2,
+	h3,
+	h4,
+	h5 {
 		margin-bottom: 0;
 
 		&:not(:first-child) {

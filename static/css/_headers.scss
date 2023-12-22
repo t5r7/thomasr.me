@@ -36,7 +36,6 @@ header#site-header {
 	}
 }
 
-
 // images in headers
 header figure.page-image {
 	position: relative;
@@ -45,7 +44,6 @@ header figure.page-image {
 	margin-bottom: -5em;
 	z-index: -1;
 
-	
 	@include on-big-screen() {
 		transform: scale(1.1);
 	}
@@ -65,9 +63,13 @@ header figure.page-image {
 		left: 0;
 		width: 100%;
 		height: 50%;
-		background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, $cDarkest 70%);
+		background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, $cDarkest 70%);
 		@include in-light-mode() {
-			background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, $cLightest 70%);
+			background: linear-gradient(
+				to bottom,
+				rgba(255, 255, 255, 0) 0%,
+				$cLightest 70%
+			);
 		}
 	}
 }
@@ -82,7 +84,8 @@ header#page-header {
 		color: $cDark;
 	}
 
-	#page-title, #page-description {
+	#page-title,
+	#page-description {
 		margin: 0;
 	}
 
