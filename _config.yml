@@ -17,6 +17,7 @@ highlighter: rouge
 
 compress_html:
   blanklines: true
+  comments: "all"
   ignore:
     envs: ["development"]
 
