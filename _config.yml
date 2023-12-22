@@ -15,7 +15,7 @@ sass:
 highlighter: rouge
 
 compress_html:
-  blanklines: false
+  blanklines: true
   endings: all
   comments: "all"
   ignore:
