@@ -1,0 +1,99 @@
+// styles only used on the home page
+
+// homepage header
+header#home-header {
+  margin-top: 7.5vh;
+  margin-bottom: 1em;
+
+  h1 {
+    font-size: 3em;
+    font-weight: 700;
+    margin: 0;
+    color: $cLight;
+    @include in-light-mode() {
+      color: $cDark;
+    }
+
+    span#js-greeting {
+      font-family: $fonts-fancy;
+      font-style: italic;
+    }
+
+    span#pronouns {
+      font-size: 0.5em;
+      color: $cLightest;
+      font-weight: 400;
+
+      @include in-light-mode() {
+        color: $cDarkest;
+      }
+      vertical-align: baseline;
+    }
+  }
+}
+
+section {
+  font-size: 110%;
+
+  p {
+    margin: 1.5em 0;
+  }
+
+  &:target {
+    background-color: $cDark;
+
+    padding: 0.5em;
+    margin: 1em 0;
+
+    border-radius: 0.2em;
+
+    @include in-light-mode {
+      background-color: $cLight;
+    }
+  }
+
+  
+  &#projects {
+    p {
+      margin: 0;
+    }
+
+    ul#projects-list {
+      margin: 0;
+      list-style: none;
+
+      padding: 0;
+
+      li {
+        margin-left: 1.5em;
+
+        &:not(:last-of-type) {
+          margin-bottom: 0.5em;
+        }
+      }
+
+      p {
+        margin: 0;
+      }
+
+      span.emoji-icon.bullet {
+        transform: translateX(-1.5em);
+        margin-right: -1.5em;
+      }
+
+      span.project-date {
+        font-size: 0.8em;
+        color: var(--accentLightIsh);
+
+        @include in-light-mode {
+          color: var(--accentDarkIsh);
+        }
+      }
+
+      span.project-desc {
+        display: block;
+        font-size: 80%;
+      }
+    }
+  }
+}

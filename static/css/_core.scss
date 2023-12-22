@@ -29,12 +29,13 @@ aside#colour-bar {
 	background-color: $c;
 }
 
-a {
+a[href]:not(.butt) {
 	color: $cLight;
 	@include in-light-mode() {
 		color: $cDark;
 	}
 	text-decoration: none;
+	font-weight: 700;
 	border-bottom: 0.2em solid $c;
 
 	&:hover, &:focus {
@@ -56,6 +57,32 @@ a {
 	}
 }
 
+a[href].butt {
+	display: inline-block;
+	padding: 0.1em 0.2em;
+	margin: 0 0.1em;
+	border: 0.15em solid $c;
+	color: $cLight;
+	font-weight: 400;
+
+	@include in-light-mode() {
+		color: $cDark;
+	}
+	text-decoration: none;
+
+	transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+
+	&:hover, &:focus {
+		background-color: $cLightest;
+		color: $cDarkest;
+
+		@include in-light-mode() {
+			background-color: $cDarkest;
+			color: $cLightest;
+		}
+	}
+}
+
 hr {
 	border: 0;
 	border-top: 0.1em solid $c;
@@ -70,10 +97,32 @@ hr {
 	filter: saturate(75%);
 }
 
+.smol {
+	font-size: 80%;
+}
+
+// from tailwind
+// https://tailwindcss.com/docs/screen-readers
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
 main {
 	max-width: $width;
 	margin: 0 auto;
 	line-height: 1.7em;
+
+	@include on-small-screen() {
+		padding: 0 1em;
+	}
 }
 
 article {

@@ -96,35 +96,3 @@ header#page-header {
 		font-weight: 400;
 	}
 }
-
-// homepage header
-header#home-header {
-	margin-top: 7.5vh;
-	margin-bottom: 1em;
-
-	h1 {
-		font-size: 3em;
-		font-weight: 700;
-		margin: 0;
-		color: $cLight;
-		@include in-light-mode() {
-			color: $cDark;
-		}
-	
-		span#js-greeting {
-			font-family: $fonts-fancy;
-			font-style: italic;
-		}
-
-		span#pronouns {
-			font-size: 0.5em;
-			color: $cLightest;
-			font-weight: 400;
-
-			@include in-light-mode() {
-				color: $cDarkest;
-			}
-			vertical-align: baseline;
-		}
-	}
-}
