@@ -102,6 +102,11 @@ hr {
 	width: 1.25em;
 	text-align: center;
 	filter: saturate(75%);
+
+	&.external-link {
+		font-size: 80%;
+		vertical-align: super;
+	}
 }
 
 .smol {
