@@ -1,6 +1,11 @@
 footer {
 	max-width: $width;
 	margin: 2em auto;
+
+	@include on-small-screen() {
+		padding: 0 1em;
+	}
+
 	text-transform: lowercase;
 
 	border-top: 0.1em solid $cDark;
