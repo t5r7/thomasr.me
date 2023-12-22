@@ -21,18 +21,26 @@ footer {
 	}
 
 	a#stay-alive {
-		color: $cDark;
 		font-family: $fonts-fancy;
 		font-style: italic;
+		border-bottom: none;
 
-		@include in-light-mode() {
-			color: $cLight;
+		span#stay-alive-text {
+			opacity: 0.2;
 		}
 
-		border-bottom: none;
+		&:hover, &:focus {
+			span#stay-alive-text {
+				opacity: 1;
+			}
+		}
 		
 		&:hover:not(:focus) {
 			color: $c;
+		}
+
+		span.emoji-icon {
+			font-style: normal;
 		}
 	}
 }
