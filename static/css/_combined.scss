@@ -1,0 +1,43 @@
+// @function light-tint($col, $pc) { @return mix(#fff, $col, $pc); }
+// @function dark-tint($col, $pc) { @return mix(#000, $col, $pc); }
+
+@mixin in-light-mode() {
+    @media (prefers-color-scheme: light) { @content; }
+}
+@mixin on-small-screen() {
+    @media screen and (max-width: 60em) { @content; }
+}
+@mixin on-big-screen() {
+    @media screen and (min-width: 60em) { @content; }
+}
+
+:root {
+    // tailwind "stone" is default, neutral
+    --cDarkest: #1c1917; // 900
+    --cDark: #44403C; // 700
+    --c: #0EA5E9; // sky 300
+    @include in-light-mode() {
+        --c: #0369A1; // sky 600
+    }
+    --cLight: #E7E5E4; // 200 
+    --cLightest: #FAFAF9; // warm grey 50
+
+    --width: 40em;
+
+    --fonts: 'Atkinson Hyperlegible', 'Verdana', 'Tahoma', 'Helvetica', sans-serif;
+	--fonts-fancy: 'Libre Baskerville', 'Georgia', 'Times New Roman', serif;
+}
+
+$cDarkest: var(--cDarkest, #1c1917);
+$cDark: var(--cDark, #44403C);
+$c: var(--c, #0EA5E9);
+$cLight: var(--cLight, #E7E5E4);
+$cLightest: var(--cLightest, #FAFAF9);
+
+$fonts: var(--fonts, sans-serif);
+$fonts-fancy: var(--fonts-fancy, serif);
+$width: var(--width, 40em);
+
+@import 'fonts/libre-baskerville.scss';
+@import 'fonts/atkinson-hyperlegible.scss';
+@import 'core';

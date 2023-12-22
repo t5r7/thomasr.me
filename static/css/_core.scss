@@ -1,0 +1,30 @@
+html, body {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	color: $cLightest;
+	background-color: $cDarkest;
+	
+	@include in-light-mode() {
+		color: $cDarkest;
+		background-color: $cLightest;
+	}
+
+	font-family: $fonts;
+}
+
+main {
+	max-width: $width;
+	margin: 0 auto;
+}
+
+aside#colour-bar {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 1em;
+	background-color: $c;
+}

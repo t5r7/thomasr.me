@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="robots" content="{% if page.hidden or jekyll.environment != 'production' %}noindex, follow{% else %}index, follow{% endif %}">
+
+
+	<!-- page title - only add the page title if not on homepage -->
+	{% capture title %}
+		{% if page.url == '/' %}
+			{{ site.title }}
+		{% else %}
+			{{ page.title }} &mdash; {{ site.title }} 
+		{% endif %}
+	{% endcapture %}
+	{% assign title = title | strip %}
+
+	<!-- page description -->
+	{% capture description %}
+		{% if page.description %}
+			{{ page.description }}
+		{% else %}
+			{{ site.description }}
+		{% endif %}
+	{% endcapture %}
+	{% assign description = description | strip %}
+
+	<!-- page image -->
+	{% capture image %}
+		{% if page.image %}
+			{{ page.image }}
+		{% else %}
+			{{ site.image }}
+		{% endif %}
+	{% endcapture %}
+	{% assign image = image | strip | prepend: site.baseurl | prepend: site.url %}
+
+	<!-- page url -->
+	{% capture url %}
+		{{ site.url }}{{ site.baseurl }}{{ page.url }}
+	{% endcapture %}
+	{% assign url = url | strip %}
+
+	<!-- seo tags -->
+	<meta name="title" content="{{ title }}">
+	<meta name="description" content="{{ description }}">
+	<meta name="author" content="Thomas Robinson">
+
+	<!-- opengraph -->
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="{{ url }}">
+	<meta property="og:title" content="{{ title }}">
+	<meta property="og:description" content="{{ description }}">
+	<meta property="og:image" content="{{ image }}">
+	<meta property="author" content="Thomas Robinson">
+
+	<!-- twitter -->
+	<meta property="twitter:card" content="summary_large_image">
+	<meta property="twitter:url" content="{{ url }}">
+	<meta property="twitter:title" content="{{ title }}">
+	<meta property="twitter:description" content="{{ description }}">
+	<meta property="twitter:image" content="{{ image }}">
+	<meta property="twitter:creator" content="@itsmeimtom">
+
+	<title>{{ title }}</title>
+
+	<!-- icon, css -->
+	<link rel="shortcut icon" href="{{ site.baseurl }}static/img/twemoji-peace-square.png" type="image/png">
+	<link rel="stylesheet" href="{{ site.baseurl }}static/css/main.css">
+</head>
+<body>
+	<aside id="colour-bar" aria-hidden="true"></aside>
+
+	<!-- if we're not on the homepage, show the global site header -->
+	{% if page.url != '/' %}
+		{% include site-header.html %}
+	{% endif %}
+
+	<main>
+		<article>
+			<!-- use either page header or home header -->
+			{% if page.url == '/' %}
+				{% include home-header.html %}
+			{% else %}
+				{% include page-header.html %}
+			{% endif %}
+
+			{{ content }}
+		</article>
+	</main>
+
+	<!-- footer -->
+	{% include footer.html %}
+</body>
+</html>

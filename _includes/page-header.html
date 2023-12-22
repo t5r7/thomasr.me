@@ -1,0 +1,15 @@
+<!-- this is the header that shows on every page -->
+<!-- with the page image, title, and description -->
+
+<header id="page-header">
+	{% if page.image %}
+	<figure id="page-image">
+		<img src="{{ page.image }}" alt="{{ page.title }}">
+	</figure>
+	{% endif %}
+
+	<h2 id="page-title">{{ page.title }}</h2>
+	{% if page.description %}
+		<h3 id="page-description">{{ page.description }}</h3>
+	{% endif %}
+</header>
