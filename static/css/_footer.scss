@@ -1,0 +1,33 @@
+footer {
+	max-width: $width;
+	margin: 2em auto;
+	text-transform: lowercase;
+
+	border-top: 0.1em solid $cDark;
+	@include in-light-mode() {
+		border-top-color: $cLight;
+	}
+
+	display: flex;
+	justify-content: space-between;
+
+	a#new-colour {
+		border-bottom: none;
+	}
+
+	a#stay-alive {
+		color: $cDark;
+		font-family: $fonts-fancy;
+		font-style: italic;
+
+		@include in-light-mode() {
+			color: $cLight;
+		}
+
+		border-bottom: none;
+		
+		&:hover:not(:focus) {
+			color: $c;
+		}
+	}
+}

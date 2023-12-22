@@ -37,19 +37,29 @@ function hslToHex(h, s, l) {
 	return `#${f(0)}${f(8)}${f(4)}`;
 }
 
+function randomAccent() {
+	const lastColour = localStorage.getItem("last-colour");
 
-const lastColour = localStorage.getItem("last-colour");
+	// if last colour doesn't exist
+	if (!lastColour) {
+		setColour(getHue());
+	} else {
+		// while new colour is too similar to last colour
+		let newColour = getHue();
 
-// if last colour doesn't exist
-if (!lastColour) {
-	setColour(getHue());
-} else {
-	// while new colour is too similar to last colour
-	let newColour = getHue();
+		while (Math.abs(newColour - lastColour) < 40) {
+			newColour = getHue();
+		}
 
-	while (Math.abs(newColour - lastColour) < 40) {
-		newColour = getHue();
+		setColour(newColour);
 	}
+}
 
-	setColour(newColour);
+window.onload = randomAccent;
+
+// Rainbow Colour Bar (Summer Pride!!)
+const now = new Date();
+if ([5, 6, 7].includes(now.getMonth())) { // if June, July or Aug
+	document.getElementById('colour-bar').classList.add('pride');
+	document.getElementById('colour-bar').setAttribute('title', 'Happy Pride! <3');
 }

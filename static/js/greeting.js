@@ -1,4 +1,6 @@
-let now = new Date();
+// homepage greeting and email deobfuscation
+
+// now is already defined by the accent colour script
 let h = now.getHours();
 
 let greeting = "Hello,";
@@ -8,3 +10,6 @@ if (h >= 18 && h < 22) greeting = "Good&nbsp;Evening,"; // 18-22
 if (h >= 22) greeting = "Good&nbsp;Evening,"; // 22-23
 
 document.getElementById('js-greeting').innerHTML = greeting;
+
+const email = atob('bWVAVG9tUi5tZQ==');
+document.getElementById('js-email-text').innerHTML = email;
