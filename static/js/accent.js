@@ -20,8 +20,6 @@ function setColour(hue) {
 	setCssAccent("Light", hslToHex(hue, 50, 75));
 	setCssAccent("Lightest", hslToHex(hue, 35, 95));
 	setCssAccent("", hslToHex(hue, 50, 45));
-
-	document.querySelector("html").style["visibility"] = "visible";
 }
 
 // Thank you, icl7126
