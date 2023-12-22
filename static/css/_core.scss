@@ -1,3 +1,7 @@
+html {
+	visibility: hidden;
+}
+
 html, body {
 	margin: 0;
 	padding: 0;
@@ -13,18 +17,47 @@ body {
 	}
 
 	font-family: $fonts;
+	font-size: 1.1em;
 }
 
 main {
 	max-width: $width;
 	margin: 0 auto;
+	line-height: 1.7em;
 }
 
 aside#colour-bar {
-	position: absolute;
-	top: 0;
+	position: fixed;
+	top: -0.5em;
 	left: 0;
 	width: 100vw;
 	height: 1em;
 	background-color: $c;
+}
+
+a {
+	color: $cLight;
+	@include in-light-mode() {
+		color: $cDark;
+	}
+	text-decoration: none;
+	border-bottom: 0.2em solid $c;
+
+	&:hover, &:focus {
+		border-bottom-color: $cLight;
+	
+		@include in-light-mode() {
+			border-bottom-color: $cDark;
+		}
+	}
+
+	&:focus {
+		outline: 0;
+		background-color: $cLightest;
+		color: $cDarkest;
+		@include in-light-mode() {
+			background-color: $cDarkest;
+			color: $cLightest;
+		}
+	}
 }
