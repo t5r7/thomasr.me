@@ -12,4 +12,4 @@ if (h >= 22) greeting = "Good&nbsp;Evening,"; // 22-23
 document.getElementById('js-greeting').innerHTML = greeting;
 
 const email = atob('bWVAVG9tUi5tZQ==');
-document.getElementById('js-email-text').innerHTML = email;
+document.getElementById('js-email').innerHTML = email;
