@@ -11,5 +11,7 @@
 <script src="{{ site.baseurl }}/static/js/accent.js"></script>
 
 {% if page.url == '/' %}
-	<script src="{{ site.baseurl }}/static/js/greeting.js"></script>
+	<script>
+		{% include_relative static/js/greeting.js %}
+	</script>
 {% endif %}

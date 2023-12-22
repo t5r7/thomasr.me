@@ -37,7 +37,7 @@ function hslToHex(h, s, l) {
 	return `#${f(0)}${f(8)}${f(4)}`;
 }
 
-function randomAccent() {
+async function randomAccent() {
 	const lastColour = localStorage.getItem("last-colour");
 
 	// if last colour doesn't exist
@@ -55,7 +55,7 @@ function randomAccent() {
 	}
 }
 
-window.onload = randomAccent;
+window.addEventListener('load', randomAccent);
 
 // Rainbow Colour Bar (Summer Pride!!)
 const now = new Date();
