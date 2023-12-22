@@ -4,7 +4,7 @@
 <header id="page-header">
 	{% if page.image %}
 	<figure class="page-image" aria-hidden="true">
-		<img src="{{ page.image }}" alt="{{ page.title }}">
+		<img src="{{ page.image | prepend: 'static/img/' | prepend: site.baseurl }}" alt="{{ page.title }}">
 	</figure>
 	{% endif %}
 

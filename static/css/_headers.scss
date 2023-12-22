@@ -1,5 +1,6 @@
 header {
 	text-transform: lowercase;
+	line-height: normal;
 }
 
 // site header
@@ -23,6 +24,9 @@ header#site-header {
 
 			&:hover {
 				text-decoration: underline;
+			}
+
+			&:hover:not(:focus) {
 				color: $cLightest;
 				@include in-light-mode() {
 					color: $cDarkest;
@@ -43,7 +47,6 @@ header figure.page-image {
 
 	
 	@include on-big-screen() {
-		margin-top: 5em;
 		transform: scale(1.1);
 	}
 
@@ -91,18 +94,22 @@ header#page-header {
 	#page-description {
 		font-size: 1.5em;
 		font-weight: 400;
-		margin-top: 0.5em;
 	}
 }
 
 // homepage header
 header#home-header {
-	margin: 2em 0;
+	margin-top: 7.5vh;
+	margin-bottom: 1em;
 
 	h1 {
 		font-size: 3em;
 		font-weight: 700;
 		margin: 0;
+		color: $cLight;
+		@include in-light-mode() {
+			color: $cDark;
+		}
 	
 		span#js-greeting {
 			font-family: $fonts-fancy;
@@ -111,7 +118,12 @@ header#home-header {
 
 		span#pronouns {
 			font-size: 0.5em;
-			color: $c;
+			color: $cLightest;
+			font-weight: 400;
+
+			@include in-light-mode() {
+				color: $cDarkest;
+			}
 			vertical-align: baseline;
 		}
 	}
