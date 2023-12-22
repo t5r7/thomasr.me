@@ -18,6 +18,10 @@ footer {
 
 	a#new-colour {
 		border-bottom: none;
+
+		&:hover {
+			text-decoration: underline;
+		}
 	}
 
 	a#stay-alive {
@@ -26,7 +30,7 @@ footer {
 		border-bottom: none;
 
 		span#stay-alive-text {
-			opacity: 0.2;
+			opacity: 0;
 		}
 
 		&:hover, &:focus {

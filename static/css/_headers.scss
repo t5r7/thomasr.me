@@ -41,7 +41,7 @@ header figure.page-image {
 	position: relative;
 	width: 100%;
 	margin: 0;
-	margin-bottom: -5em;
+	margin-bottom: -15%;
 	z-index: -1;
 
 	@include on-big-screen() {
@@ -50,6 +50,8 @@ header figure.page-image {
 
 	img {
 		width: 100%;
+		aspect-ratio: 2 / 1;
+		object-fit: cover;
 		border-top-left-radius: 0.5em;
 		border-top-right-radius: 0.5em;
 		filter: brightness(0.9) saturate(1.2) contrast(1.2);
@@ -63,7 +65,7 @@ header figure.page-image {
 		left: 0;
 		width: 100%;
 		height: 50%;
-		background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, $cDarkest 70%);
+		background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, $cDarkest 50%);
 		@include in-light-mode() {
 			background: linear-gradient(
 				to bottom,
