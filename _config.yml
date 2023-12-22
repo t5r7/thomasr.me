@@ -1,0 +1,25 @@
+title: ThomasR.me
+
+future: true
+baseurl: ""
+url: https://thomasr.me
+locale: en_GB
+
+permalink: /:title/
+
+sass:
+  sass_dir: static/css
+  style: compressed
+
+highlighter: rouge
+
+compress_html:
+  blanklines: true
+  ignore:
+    envs: ["development"]
+
+plugins:
+  - jekyll-sitemap
+
+exclude:
+  - vercel.json
