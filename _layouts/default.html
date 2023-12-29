@@ -111,13 +111,13 @@ layout: compress
 	<!-- footer -->
 	{% include footer.html %}
 
- <script>
-	 {% include_relative /static/js/accent.js %}
+    <script>
+	 {% include accent.js %}
 	</script>
 
 	{% if page.url == '/' %}
 		<script>
-			{% include_relative /static/js/greeting.js %}
+			{% include greeting.js %}
 		</script>
 	{% endif %}
 </body>
