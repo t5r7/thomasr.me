@@ -111,7 +111,9 @@ layout: compress
 	<!-- footer -->
 	{% include footer.html %}
 
-	<script src="{{ site.baseurl }}/static/js/accent.js"></script>
+ <script>
+	 {% include_relative static/js/accent.js %}
+	</script>
 
 	{% if page.url == '/' %}
 		<script>
