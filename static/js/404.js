@@ -1,19 +1,24 @@
-const newURL = `https://github-pages.thomasr.me${location.pathname}`;
+const apiEndpoint = `https://github-pages-check.thomasr.me/?slug=${location.pathname}`;
+const newURL = location.href.replace(location.host, `github-pages.thomasr.me`);
 
-if (location.pathname !== "/404.html") {
-    const reqToCheck = new XMLHttpRequest();
-    reqToCheck.open("HEAD", newURL, true);
-    reqToCheck.onreadystatechange = function() {
-        if (reqToCheck.readyState === 4) {
-            if (reqToCheck.status === 404) {
-                // it doesn't exist
-            } else {
-                document.title = "This page has moved!";
-                document.getElementById("page-title").innerHTML = "This page has moved!";
-                document.getElementById("page-description").innerHTML = "You should be redirected shortly.";
-                window.location = newURL;
-            }
-        }
-    };
-    reqToCheck.send();
+async function checkRedirect() {
+    const r = await fetch(apiEndpoint, { method: "HEAD" });
+    const statusStart = r.status.toString().charAt(0);
+
+    if (statusStart === "2" || statusStart === "3") {
+        document.title = "This page has moved!";
+
+        document.querySelector("article").innerHTML = `
+        <header id="page-header">
+	        <h2 id="page-title">This page has moved!</h2>
+            <h3 id="page-description">You should be redirected shortly.</h3>
+        </header>
+
+        <p>If you are not redirected, please navigate to <a href="${newURL}">${newURL}</a>.</p>
+        `;
+
+        window.location = newURL;
+    }
 }
+
+document.addEventListener("DOMContentLoaded", checkRedirect);
