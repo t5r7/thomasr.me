@@ -21,7 +21,7 @@
     },
     {
       "source": "/flickr/map/stations(/*)",
-      "destination": "https://www.google.com/maps/d/edit?mid=1I6N53Rx0baiZX8nbl4yVGC9R3YXLGXM"
+      "destination": "/journey-logging"
     },
     {
       "source": "/humans:slug*",
@@ -34,10 +34,6 @@
     {
       "source": "/projects/twitterbot(/*)",
       "destination": "/twitterbot"
-    },
-    {
-      "source": "/projects/aog-privacy(/*)",
-      "destination": "/aog-privacy"
     },
     {
       "source": "/(faq/tech|faq/devices|tech|devices)(/*)",
