@@ -20,3 +20,13 @@ permalink: /keyboards/
 ## Daskeyboard Prime 13 (White, ISO)
 - Stock Keycaps
 - Cherry MX Brown switches
+
+
+<!-- the notion page was monospace, why not make this one too :^) -->
+<style>
+	@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;700&display=swap');
+
+	:root {
+		--fonts: 'IBM Plex Mono', monospace;
+	}
+</style>
