@@ -1,5 +1,5 @@
 const apiEndpoint = `https://github-pages-check.thomasr.me/?slug=${location.pathname}`;
-const newURL = location.href.replace(location.host, `github-pages.thomasr.me`);
+const newURL = location.href.replace(location.host, `thomasr.dev`);
 
 async function checkRedirect() {
     const r = await fetch(apiEndpoint, { method: "HEAD" });

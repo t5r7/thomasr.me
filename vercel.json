@@ -17,7 +17,7 @@
     },
     {
       "source": "/(flickr|photography|photos|photog)/(map|photosets|photos)(/*)",
-      "destination": "https://github-pages.thomasr.me/flickr-toys/"
+      "destination": "https://thomasr.dev/flickr-toys/"
     },
     {
       "source": "/flickr/map/stations(/*)",
@@ -76,10 +76,6 @@
         {
           "key": "X-Powered-By",
           "value": "hugs"
-        },
-        {
-          "key": "Content-Security-Policy",
-          "value": "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; font-src 'self'; connect-src 'self' https://github-pages.thomasr.me; img-src 'self' data:; frame-src 'self';"
         }
       ]
     },
@@ -93,10 +89,6 @@
         {
           "key": "X-Powered-By",
           "value": "hugs"
-        },
-        {
-          "key": "Content-Security-Policy",
-          "value": "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; font-src 'self'; connect-src 'self' https://github-pages.thomasr.me; img-src 'self' data:; frame-src 'self';"
         }
       ]
     }

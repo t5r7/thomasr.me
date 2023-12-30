@@ -11,7 +11,7 @@ On [RailMiles](https://yom.railmiles.me), I only log rail-based journeys (trains
 
 
 ### Visited Stations
-- [Map](https://github-pages.thomasr.me/station-mapper/#gsheet)
+- [Map](https://thomasr.dev/station-mapper/#gsheet)
 - [Spreadsheet](https://docs.google.com/spreadsheets/d/1RD-5-8crKwORuKXBFUmFvfsBLY_4UsE08_duTvG-218/edit)
 
 To be included in the list, I must have either boarded or alighted from a vehicle at the station.
