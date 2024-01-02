@@ -83,10 +83,10 @@ section {
 
 			span.project-date {
 				font-size: 0.8em;
-				color: var(--accentLightIsh);
+				color: $cLight;
 
 				@include in-light-mode {
-					color: var(--accentDarkIsh);
+					color: $cDark;
 				}
 			}
 
