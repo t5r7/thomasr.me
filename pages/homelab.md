@@ -1,6 +1,7 @@
 ---
 layout: default
 title: "Homelab"
+metadescription: "Information about my homelab and its purpose"
 image: "homelab.jpg"
 permalink: "/lab/"
 ---

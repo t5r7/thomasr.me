@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Domain List
+metadescription: "A list of domains I own and control"
 permalink: /domains/
 hidden: true
 ---

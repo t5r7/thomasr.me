@@ -22,7 +22,9 @@ layout: compress
 
 	<!-- page description -->
 	{% capture description %}
-		{% if page.description %}
+		{% if page.metadescription %}
+			{{ page.metadescription }}
+		{% else if page.description %}
 			{{ page.description }}
 		{% else %}
 			{{ site.description }}

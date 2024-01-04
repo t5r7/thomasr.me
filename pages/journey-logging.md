@@ -2,7 +2,7 @@
 layout: default
 title: "Journey Logging"
 image: "journey-logging.jpg"
-description: "Journey Logging: Profiles and Statistics"
+description: "Profiles and Statistics"
 permalink: /journey-logging/
 ---
 

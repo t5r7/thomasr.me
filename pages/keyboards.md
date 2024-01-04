@@ -2,7 +2,7 @@
 layout: default
 title: "Keyboards"
 image: "keyboards.jpg"
-description: "Keyboards and Typing"
+metadescription: "Keyboards and Typing"
 permalink: /keyboards/
 ---
 
