@@ -103,7 +103,6 @@ hr {
 
 	&.external-link {
 		font-size: 80%;
-		vertical-align: super;
 	}
 }
 
@@ -128,7 +127,7 @@ hr {
 main {
 	max-width: $width;
 	margin: 0 auto;
-	line-height: 1.7em;
+	line-height: 1.75em;
 
 	@include on-small-screen() {
 		padding: 0 1em;
