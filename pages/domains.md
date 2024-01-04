@@ -5,7 +5,7 @@ permalink: /domains/
 hidden: true
 ---
 
-In the intrest of transparency, here is a list of domains I own and control:
+In the interest of transparency, here is a list of domains I own and control:
 
 - 49ga.ng
 - diamondpigman.co.uk
