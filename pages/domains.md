@@ -1,10 +1,11 @@
 ---
 layout: default
 title: Domain List
-description: Domains I own and control
 permalink: /domains/
 hidden: true
 ---
+
+In the intrest of transparency, here is a list of domains I own and control:
 
 - 49ga.ng
 - diamondpigman.co.uk
@@ -18,4 +19,27 @@ hidden: true
 - trobinson.me
 - yom.gay
 
-Anything not listed here has no affiliation with me.
+While I'm trying to move away, I have a few pages on Notion at `imtom.notion.site`.
+
+---
+
+<details>
+	<summary>
+		<strong>Previous Domains</strong>
+	</summary>
+	<p>I no longer own these domains and therefore have no control over them:</p>
+
+	<ul>
+		<li>diamondpigman.com</li>
+		<li>fishys.space</li>
+		<li>owouwu.tech</li>
+		<li>thomasr.cymru</li>
+		<li>westmidlandsbus.com</li>
+	</ul>
+</details>
+
+---
+
+Anything not listed here has no affiliation with me. 
+
+Do get in touch if you think I've missed anything, or have any queries.
