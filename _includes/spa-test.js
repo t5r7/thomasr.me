@@ -28,7 +28,7 @@ async function preloadPage(href, element) {
 	if (preloaded[href]) return;
 
 	const res = await fetch(href);
-	if(!res.ok) return;
+	if (!res.ok) return;
 
 	const pageContent = await res.text();
 	const pageDOM = new DOMParser().parseFromString(pageContent, "text/html");
@@ -40,7 +40,7 @@ async function goToPage(href) {
 	console.log("navigating to", href);
 	let newDOM;
 
-	if(preloaded[href]) {
+	if (preloaded[href]) {
 		console.log("preloaded - swapping body", href);
 
 		newDOM = preloaded[href];
@@ -67,13 +67,13 @@ async function goToPage(href) {
 	}
 }
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener("DOMContentLoaded", () => {
 	updateLinks();
 });
 
 // let's not bother ourselves with the back and forward buttons
 // maybe in the future...
-window.addEventListener('popstate', () => {
+window.addEventListener("popstate", () => {
 	window.location = location.href;
 });
 
@@ -88,25 +88,20 @@ function updateMetaTags(newDOM) {
 		let found = false;
 
 		currentMetaTags.forEach(currentMetaTag => {
-			if (currentMetaTag.isEqualNode(newMetaTag)) {
-				found = true;
-			}
+			if (currentMetaTag.isEqualNode(newMetaTag)) found = true;
 		});
 
-		if (!found) {
-			document.head.appendChild(newMetaTag);
-		}
+		if (!found) document.head.appendChild(newMetaTag);
 	});
 }
 
 function isLocal(href) {
-	if (href.startsWith(`${location.origin}`)) {
-		return true;
-	}
+	// if ends with filetype, we don't want to touch it
+	if (href.match(/\.[a-zA-Z]{2,4}$/i)) return false;
 
-	if (href.startsWith('http://') || href.startsWith('https://')) {
-		return false;
-	}
+	// if starts with origin
+	if (href.startsWith(`${location.origin}`)) return true;
 
-	return true;
+	// if it links anywhere else, we assume false to be on the safe side
+	return false;
 }
