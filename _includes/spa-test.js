@@ -45,7 +45,7 @@ async function goToPage(href) {
 
 		newDOM = preloaded[href];
 
-		history.pushState({}, '', href);
+		history.pushState({}, "", href);
 
 		document.title = newDOM.title;
 		document.body.innerHTML = newDOM.body.innerHTML;
@@ -69,6 +69,12 @@ async function goToPage(href) {
 
 document.addEventListener('DOMContentLoaded', () => {
 	updateLinks();
+});
+
+// let's not bother ourselves with the back and forward buttons
+// maybe in the future...
+window.addEventListener('popstate', () => {
+	window.location = location.href;
 });
 
 function updateMetaTags(newDOM) {
