@@ -42,25 +42,34 @@ I also have a small collection of older laptops and PCs, but they don't see too 
 
 
 ### Peripherals
-- <span class="emoji-icon" aria-hidden="true">🖱️</span> Logitech MX Master 3 (mouse)
-- <span class="emoji-icon" aria-hidden="true">⌨️</span> Keychron K8 Pro (RGB, ISO/UK, Super Speed Copper) (keyboard)
-- <span class="emoji-icon" aria-hidden="true">🎧</span> Sennheiser HD 58X Jubilee with Fosi DAC-Q4 (headphones, DAC)
-- <span class="emoji-icon" aria-hidden="true">🎙️</span> Samson Go (mic)
-- <span class="emoji-icon" aria-hidden="true">🔌</span> ThinkPad Thunderbolt 3 Dock, 40AC
-- <span class="emoji-icon" aria-hidden="true">📺</span> Dell 27" 1440p 165hz "Gaming" Monitor
-- <span class="emoji-icon" aria-hidden="true">📺</span> 2x AOC 23" 1080p Monitors
+- <span class="emoji-icon" aria-hidden="true">🖱️</span> Logitech MX Master 3 mouse --- good for spreadsheets, less good for Half Life
+- <span class="emoji-icon" aria-hidden="true">⌨️</span> <a href="{{ site.baseurl }}/keyboards">Keyboards</a> --- trying hard not to go down the rabbit hole
+- <span class="emoji-icon" aria-hidden="true">🎧</span> Sennheiser HD 58X Jubilee with Fosi DAC-Q4 (headphones, DAC) --- I'm not an audiophile, but good audio is good audio
+- <span class="emoji-icon" aria-hidden="true">🎙️</span> Samson Go Microphone --- should've gone with the Meteor
+- <span class="emoji-icon" aria-hidden="true">🔌</span> ThinkPad Thunderbolt 3 Dock, model 40AC --- for my laptops at Uni; these things are exceptionally cheap on eBay now
+- <span class="emoji-icon" aria-hidden="true">📺</span> Dell 27" 1440p 165hz "Gaming" Monitor --- I don't game much, but it's a pretty good all-round monitor
+<!-- - <span class="emoji-icon" aria-hidden="true">📺</span> 2x AOC 23" 1080p Monitors -->
 
 ## Accessories & [EDC](https://reddit.com/r/edc)
-- <span class="emoji-icon" aria-hidden="true">📱</span> iPhone 12 mini
-- <span class="emoji-icon" aria-hidden="true">⌚</span> Apple Watch Series 4
-- <span class="emoji-icon" aria-hidden="true">🎶</span> Airpods Pros
-- <span class="emoji-icon" aria-hidden="true">🎶</span> Moondrop Chus
-- <span class="emoji-icon" aria-hidden="true">🎒</span> Fjalraven Raven 20 Backpack
+- <span class="emoji-icon" aria-hidden="true">📱</span> iPhone 12 mini --- I will use this until it dies
+- <span class="emoji-icon" aria-hidden="true">⌚</span> Apple Watch Series 7 --- I would've kept my Series 4, but I got the 7 for not much more than a battery replacement
+- <span class="emoji-icon" aria-hidden="true">🎶</span> Airpods Pros --- Airpods have been the least reliable Apple product I've ever owned, but they are still the most seamless 
+- <span class="emoji-icon" aria-hidden="true">🎒</span> Fjalraven Raven 20L backpack --- it has a fox on it! And doesn't make me look like a year seven with an enormous backpack
+- <span class="emoji-icon" aria-hidden="true">🔦</span> Rovyvon E1 torch --- for all of the dark allyways I walk down at night, of course
 
 ## Infrastructure Services
-- <span class="emoji-icon" aria-hidden="true">📧</span> Migadu (mail)
-- <span class="emoji-icon" aria-hidden="true">🛆</span> Vercel (hosting)
-- <span class="emoji-icon" aria-hidden="true">🤓</span> GitHub, GitHub&nbsp;Pages, Self-Hosted&nbsp;GitLab (code repositories)
-- <span class="emoji-icon" aria-hidden="true">🥼</span> My [homelab](/lab) (hosting and experimentation)
-- <span class="emoji-icon" aria-hidden="true">☁️</span> Cloudflare (DNS, Reverse Proxy, CDN, Access)
-- <span class="emoji-icon" aria-hidden="true">🐷</span> Porkbun (domain registrar)
+- <span class="emoji-icon" aria-hidden="true">📧</span> Migadu --- I cannot fault, especially for the price
+- <span class="emoji-icon" aria-hidden="true">🛆</span> Vercel (hosting) --- is overkill for this site, but nice to experiment with
+- <span class="emoji-icon" aria-hidden="true">🤓</span> GitHub --- the obvious choice
+- <span class="emoji-icon" aria-hidden="true">🤓</span> Self-Hosted GitLab --- for more private/infrastructure 	
+- <span class="emoji-icon" aria-hidden="true">🥼</span> My [homelab](/lab) --- for hosting and experimenting
+- <span class="emoji-icon" aria-hidden="true">☁️</span> Cloudflare --- handles DNS, Reverse Proxies, CDN, Access Control. I don't like having all my eggs in one basket, but it's hard to beat
+- <span class="emoji-icon" aria-hidden="true">🐷</span> Porkbun --- the best domain registrar
+
+## Selected Software & Services
+- <span class="emoji-icon" aria-hidden="true">⚙️</span> VS Code --- easier to use than Vim
+- <span class="emoji-icon" aria-hidden="true">🪨</span> Obsidian --- for notes
+- <span class="emoji-icon" aria-hidden="true">📝</span> Notion --- for databases and notes (I'm trying to move away where possible)
+- <span class="emoji-icon" aria-hidden="true">📩</span> Thunderird --- for email and calendaring
+- <span class="emoji-icon" aria-hidden="true">🍎</span> iCloud --- for contacts, calendars, reminders, simple notes, photos (I try and make sure things are backed up elsewhere)
+- <span class="emoji-icon" aria-hidden="true">📂</span> Google Drive --- not sure why I haven't moved away yet, but important documents go here
