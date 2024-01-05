@@ -114,13 +114,13 @@ layout: compress
 	{% include footer.html %}
 
     <script>
-	 {% include accent.js %}
-	</script>
+	{% include accent.js %}
+	{% include spa-test.js %}
+
 
 	{% if page.url == '/' %}
-		<script>
 			{% include greeting.js %}
-		</script>
 	{% endif %}
-</body>
+	</script>
+	</body>
 </html>

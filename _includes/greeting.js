@@ -10,13 +10,13 @@ async function greet() {
 	if (h >= 18 && h < 22) greeting = "Good&nbsp;Evening,"; // 18-22
 	if (h >= 22) greeting = "Good&nbsp;Evening,"; // 22-23
 
-	document.getElementById('js-greeting').innerHTML = greeting;
+	document.getElementById("js-greeting").innerHTML = greeting;
 }
 
 async function emailDeobfuscate() {
-	const email = atob('bWVAVG9tUi5tZQ==');
-	document.getElementById('js-email').innerHTML = email;
+	const email = atob("bWVAVG9tUi5tZQ==");
+	document.getElementById("js-email").innerHTML = email;
 }
 
-window.addEventListener('load', greet);
-window.addEventListener('load', emailDeobfuscate);
+window.addEventListener("DOMContentLoaded", greet);
+window.addEventListener("DOMContentLoaded", emailDeobfuscate);
