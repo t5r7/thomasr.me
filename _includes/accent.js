@@ -43,7 +43,7 @@ function randomAccent() {
 	}
 }
 
-window.addEventListener("load", randomAccent);
+window.addEventListener("DOMContentLoaded", randomAccent);
 
 // Rainbow Colour Bar (Summer Pride!!)
 const now = new Date();
