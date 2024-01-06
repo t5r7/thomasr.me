@@ -9,6 +9,10 @@ header#site-header {
 	margin: 2em auto;
 	border-bottom: 0.5em solid $c;
 
+	@include on-small-screen() {
+		padding: 0 1em;
+	}
+
 	h1 {
 		font-size: 3em;
 		margin: 0;
