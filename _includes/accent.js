@@ -9,6 +9,7 @@ function setCssAccent(a, c) {
 function setColour(hue) {
 	// if reduce motion is enabled, do nothing
 	if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+		document.querySelector("html").style["visibility"] = "visible";
 		return;
 	}
 
