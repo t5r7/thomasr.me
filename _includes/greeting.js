@@ -13,10 +13,4 @@ async function greet() {
 	document.getElementById('js-greeting').innerHTML = greeting;
 }
 
-async function emailDeobfuscate() {
-	const email = atob('bWVAVG9tUi5tZQ==');
-	document.getElementById('js-email').innerHTML = email;
-}
-
 window.addEventListener('load', greet);
-window.addEventListener('load', emailDeobfuscate);
