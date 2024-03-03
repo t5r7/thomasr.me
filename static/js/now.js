@@ -122,7 +122,7 @@ async function getFlickr() {
 				<strong><a href="${photoURL}">${photoTitle}</a></strong>, from <strong>${photoLocation}</strong> 
 			</p>
 		</figcaption>
-		<a href="${photoURL}"><img src="https://live.staticflickr.com/${latestPhotosJSON.photos.photo[0].server}/${latestPhotosJSON.photos.photo[0].id}_${latestPhotosJSON.photos.photo[0].secret}_b.jpg" alt="${photoTitle}"></a>
+		<a href="${photoURL}" class="img-link"><img src="https://live.staticflickr.com/${latestPhotosJSON.photos.photo[0].server}/${latestPhotosJSON.photos.photo[0].id}_${latestPhotosJSON.photos.photo[0].secret}_b.jpg" alt="${photoTitle}"></a>
 	</figure>`;
 }
 
