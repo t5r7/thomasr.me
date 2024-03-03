@@ -91,7 +91,7 @@ The text above was last updated on 2024-03-03. The data in the boxes below is fe
 <div id="flickr"><p>Fetching information from Flickr, hold tight!</p></div>
 
 <div id="strava">
-	<iframe src="https://www.strava.com/athletes/93454796/latest-rides/3963eabee1c38df288efc43c8f4260c4b334a99b"></iframe>
+	<iframe title="Strava Frame; list of latest activities" src="https://www.strava.com/athletes/93454796/latest-rides/3963eabee1c38df288efc43c8f4260c4b334a99b"></iframe>
 </div>
 
 ---
