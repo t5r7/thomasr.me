@@ -7,7 +7,7 @@ permalink: /now/
 
 <!-- lazy inline style rocks, change my mind -->
 <style>
-#lastfm, #statuscafe, #flickr {
+#lastfm, #statuscafe, #flickr, #strava {
 	margin-bottom: 2em;
 	padding: 1em;
 	border: 1px solid var(--c);
@@ -63,6 +63,16 @@ permalink: /now/
 #flickr a:last-of-type:hover img, #flickr a:last-of-type:focus img {
 	opacity: 0.8;
 }
+
+#strava {
+	padding: 0;
+}
+
+#strava iframe {
+	width: 100%;
+	height: 454px; /* awkward height from their embed code */
+	border: none;
+}
 </style>
 
 I'm currently in my first year of a degree in [Computer Networks & Security](https://www.port.ac.uk/study/courses/undergraduate/bsc-hons-computer-networks-and-security) at the University of Portsmouth. I'm a committee member of the [Computer Networking Society](https://netsoc.group) there. Living in a shoebox, I'm trying to spend my time learning and being outside as much as possible; Getting back into photography, hiking, and trying to travel as much as I can.
@@ -79,6 +89,10 @@ The text above was last updated on 2024-03-03. The data in the boxes below is fe
 <div id="lastfm"><p>Fetching information from Last.fm, hold tight!</p></div>
 
 <div id="flickr"><p>Fetching information from Flickr, hold tight!</p></div>
+
+<div id="strava">
+	<iframe src="https://www.strava.com/athletes/93454796/latest-rides/3963eabee1c38df288efc43c8f4260c4b334a99b"></iframe>
+</div>
 
 ---
 
