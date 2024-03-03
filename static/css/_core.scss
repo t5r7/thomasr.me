@@ -34,7 +34,7 @@ aside#colour-bar {
 	}
 }
 
-a[href]:not(.butt) {
+a[href]:not(.butt):not(.wrap-img) {
 	color: $cLight;
 	@include in-light-mode() {
 		color: $cDark;

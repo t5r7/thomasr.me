@@ -20,9 +20,11 @@ This information is generated at build time, and is not updated on every page lo
 - **{{ site.pages.size }}** Pages, **{{ site.posts.size }}** Posts, **{{ site.static_files.size }}** Static Files
 
 ## JavaScript
-The site makes use of minimal JavaScript, and makes no external requests on pages other than the 404 page.  
+The site makes use of minimal JavaScript, and makes no external requests on pages other than the 404 pages and the now page. 
 On the 404 page, a request may be made to a Cloudflare Worker, which acts as a proxy for the site that contains projects hosted by GitHub Pages. This allows for automatic redirects to projects.
 On every page, the accent colours (CSS variables) are randomly set, and on the homepage, the greeting is updated to reflect the time of day.
+
+On the now page, data is fetched from external APIs to show my current status.
 
 ## Archive
 Previous versions of the site---and many that have come before it---are available on-request. If you're a curious friend of mine, you likely already have access to [the graveyard](https://archive.thomasr.me).
