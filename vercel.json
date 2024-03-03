@@ -53,11 +53,11 @@
     },
     {
       "source": "/(projects|project|unsub|gogo|33rpm|speedtest-map|zrpc|boris|supercutter|mettranslinksystem)(/*)",
-      "destination": "/#projects"
+      "destination": "https://github.com/itsmeimtom"
     },
     {
       "source": "/(project|thing)(s?)/(\\w*)(/*)",
-      "destination": "/#projects"
+      "destination": "https://github.com/itsmeimtom"
 	}
   ],
   "rewrites": [],

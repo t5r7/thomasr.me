@@ -104,7 +104,7 @@ The text above was last updated on 2024-03-03. The data in the boxes below is fe
 <div id="planestrains">
 	<p>RailMiles Stats &amp; Latest Journey:</p>
 	<a href="https://yom.railmiles.me" class="img-link"><img src="https://public.railmiles.me/signatures/3560e69400242162df2413a6e10a1264.png"></a>
-	<p>More <a href="{{ site.baseurl }}/journey-logging">✈️🚂 Journey Logging</a></p>
+	<p>More <a href="{{ site.baseurl }}/journey-logging"><span class="emoji-icon">✈️</span><span class="emoji-icon">🚂</span> Journey Logging</a></p>
 </div>
 
 <div id="strava">
@@ -113,8 +113,8 @@ The text above was last updated on 2024-03-03. The data in the boxes below is fe
 
 ---
 
-Data from [status.cafe](https://status.cafe/users/yom), [Last.fm](https://www.last.fm/user/itsmeimtom), [setlist.fm](https://www.setlist.fm/concerts/imtom) (soon), and [Flickr](https://www.flickr.com/photos/imtom). This product uses the Flickr API but is not endorsed or certified by SmugMug, Inc.
+Data from [status.cafe](https://status.cafe/users/yom), [Last.fm](https://www.last.fm/user/itsmeimtom), [setlist.fm](https://www.setlist.fm/concerts/imtom) (soon), [Letterboxd](https://letterboxd.com/itsmeimtom/) (soon), [Flickr](https://www.flickr.com/photos/imtom), [RailMiles](https://yom.railmiles.me), and [Strava](https://www.strava.com/athletes/93454796). This product uses the Flickr API but is not endorsed or certified by SmugMug, Inc.
 
-You might be interested in [the now page movement](https://nownownow.com/about).
+Part of Derek Sivers's [now page movement](https://nownownow.com/about).
 
 <script src="{{ site.baseurl }}/static/js/now.js">
