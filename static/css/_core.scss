@@ -34,6 +34,10 @@ aside#colour-bar {
 	}
 }
 
+a, em {
+	font-family: $fonts-fancy;
+}
+
 a[href]:not(.butt) {
 	color: $cLight;
 	@include in-light-mode() {

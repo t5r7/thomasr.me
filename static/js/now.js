@@ -118,8 +118,8 @@ async function getFlickr() {
 	<figure>
 		<figcaption>
 			<p>
-				Latest photo from Flickr, <strong>taken ${photoTakenAgo} ago</strong> (<em>uploaded ${photoUploadedAgo} ago</em>):<br>
-				<strong><a href="${photoURL}">${photoTitle}</a></strong>, from <strong>${photoLocation}</strong> 
+				Latest photo from Flickr, uploaded ${photoUploadedAgo} ago (<em>taken ${photoTakenAgo} ago</em>):<br>
+				<strong><a href="${photoURL}">${photoTitle}</a></strong>, from <em>${photoLocation}</em> 
 			</p>
 		</figcaption>
 		<a href="${photoURL}" class="img-link"><img src="https://live.staticflickr.com/${latestPhotosJSON.photos.photo[0].server}/${latestPhotosJSON.photos.photo[0].id}_${latestPhotosJSON.photos.photo[0].secret}_b.jpg" alt="${photoTitle}"></a>
