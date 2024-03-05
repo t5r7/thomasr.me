@@ -4,11 +4,26 @@
 
 <header id="home-header">
 	<figure class="page-image" aria-hidden="true">
-		<img src="{{ site.image }}" alt="{{ site.title }}">
+		<picture>
+			<source srcset="{{ site.baseurl }}/static/img/blondtommodrawing-500.webp 500w,
+					        {{ site.baseurl }}/static/img/blondtommodrawing-1000.webp 1000w"
+					sizes="(max-width: 60em) 80vw,
+				           1000px"
+						   type="image/webp">
+					
+			<source srcset="{{ site.baseurl }}/static/img/blondtommodrawing-500.jpg 500w,
+					        {{ site.baseurl }}/static/img/blondtommodrawing-1000.jpg 1000w"
+					sizes="(max-width: 60em) 80vw,
+				           1000px"
+						   type="image/jpeg">
+
+			<img src="{{ site.baseurl }}/static/img/blondtommodrawing-240.jpg"
+				alt="A photograph of toddler-aged Thomas, with blond hair, lying on a carpeted floor, clutching a pen and smiling gleefully.">
+		</picture>
 	</figure>
 
 	<h1>
-		<span id="js-greeting">Hello,</span>
+		<span id="js-greeting">Hello Friend,</span>
 		I'm&nbsp;Tom!
 		<span id="pronouns"><span class="sr-only">my pronouns are </span>he/him</span>
 	</h1>

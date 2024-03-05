@@ -54,11 +54,14 @@ header figure.page-image {
 
 	img {
 		width: 100%;
-		aspect-ratio: 2 / 1;
+		aspect-ratio: 1.75 / 1;
 		object-fit: cover;
 		border-top-left-radius: 0.5em;
 		border-top-right-radius: 0.5em;
-		filter: brightness(0.9) saturate(1.2) contrast(1.2);
+		filter: brightness(0.9) saturate(0.8) contrast(1.2);
+		@include in-light-mode() {
+			filter: brightness(1.1) saturate(1) contrast(1.2);
+		}
 	}
 
 	// fade out bottom of image
