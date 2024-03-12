@@ -40,7 +40,7 @@
       "destination": "/uses"
     },
     {
-      "source": "/(home)?lab(/*)",
+      "source": "/(lab|homelab)(/*)",
       "destination": "https://wiki.tomr.me/lab"
     },
     {
