@@ -58,7 +58,10 @@
     {
       "source": "/(project|thing)(s?)/(\\w*)(/*)",
       "destination": "https://github.com/itsmeimtom"
-	}
+	},
+  {
+   "source":"/domains(/*)",
+   "destination": "https://wiki.tomr.me/lab/docs/domains"
   ],
   "rewrites": [],
   "headers": [
