@@ -62,7 +62,7 @@
   {
    "source":"/domains(/*)",
    "destination": "https://wiki.tomr.me/lab/docs/domains"
-  ],
+  },
   "rewrites": [],
   "headers": [
     {
