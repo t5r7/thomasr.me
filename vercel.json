@@ -25,7 +25,7 @@
     },
     {
       "source": "/humans:slug*",
-      "destination": "https://github.com/itsmeimtom/thomasr.me/graphs/contributors"
+      "destination": "https://github.com/t5r7/thomasr.me/graphs/contributors"
     },
     {
       "source": "/(cv|resume)(/*)",
@@ -53,11 +53,11 @@
     },
     {
       "source": "/(projects|project|unsub|gogo|33rpm|speedtest-map|zrpc|boris|supercutter|mettranslinksystem)(/*)",
-      "destination": "https://github.com/itsmeimtom"
+      "destination": "https://github.com/t5r7"
     },
     {
       "source": "/(project|thing)(s?)/(\\w*)(/*)",
-      "destination": "https://github.com/itsmeimtom"
+      "destination": "https://github.com/t5r7"
     },
     {
       "source": "/domains(/*)",
