@@ -7,6 +7,10 @@ permalink: /now/
 
 <!-- lazy inline style rocks, change my mind -->
 <style>
+header#page-header {
+	margin-bottom: 2em;
+}
+
 #lastfm, #statuscafe, #flickr, #strava, #planestrains {
 	margin-bottom: 2em;
 	padding: 1em;
