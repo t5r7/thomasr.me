@@ -70,7 +70,9 @@ a.img-link:hover img, a.img-link:focus img {
 
 #strava iframe {
 	width: 100%;
-	height: 454px; /* awkward height from their embed code */
+	/* height: 454px; /* awkward height from their embed code */
+	margin: 0;
+	padding: 0;
 	border: none;
 }
 
@@ -86,16 +88,13 @@ a.img-link:hover img, a.img-link:focus img {
 }
 </style>
 
-I'm currently in my first year of a degree in [Computer Networks & Security](https://www.port.ac.uk/study/courses/undergraduate/bsc-hons-computer-networks-and-security) at the University of Portsmouth. I'm a committee member of the [Computer Networking Society](https://netsoc.group) there. Living in a shoebox, I'm trying to spend my time learning and being outside as much as possible; Getting back into photography, hiking, and trying to travel as much as I can.
-
-The text above was last updated on 2024-03-03. The data in the boxes below is fetched programmatically and should be up to date.
 
 <noscript>
 <p>Unfortunately, you need JavaScript enabled to see the programmatically fetched data that would be here.</p>
 <p>You can still use the links below to access my profiles manually.</p>
 </noscript>
 
-<div id="statuscafe"><p>Fetching information from status.cafe, hold tight!</p></div>
+<!-- <div id="statuscafe"><p>Fetching information from status.cafe, hold tight!</p></div> -->
 
 <div id="lastfm"><p>Fetching information from Last.fm, hold tight!</p></div>
 
@@ -108,12 +107,16 @@ The text above was last updated on 2024-03-03. The data in the boxes below is fe
 </div>
 
 <div id="strava">
-	<iframe title="Strava Frame; list of latest activities" src="https://www.strava.com/athletes/93454796/latest-rides/3963eabee1c38df288efc43c8f4260c4b334a99b"></iframe>
+	<iframe title="Strava Frame; summary of latest activities" src="https://www.strava.com/athletes/93454796/activity-summary/3963eabee1c38df288efc43c8f4260c4b334a99b"></iframe>
 </div>
 
 ---
 
-Data from [status.cafe](https://status.cafe/users/yom), [Last.fm](https://www.last.fm/user/itsmeimtom), [setlist.fm](https://www.setlist.fm/concerts/imtom) (soon), [Letterboxd](https://letterboxd.com/itsmeimtom/) (soon), [Flickr](https://www.flickr.com/photos/imtom), [RailMiles](https://yom.railmiles.me), and [Strava](https://www.strava.com/athletes/93454796). This product uses the Flickr API but is not endorsed or certified by SmugMug, Inc.
+Looking for professional happenings? [LinkedIn](https://www.linkedin.com/in/t5r7) is the place to be!
+
+---
+
+Data from [Last.fm](https://www.last.fm/user/itsmeimtom), [Flickr](https://www.flickr.com/photos/imtom), [RailMiles](https://yom.railmiles.me), and [Strava](https://www.strava.com/athletes/93454796). This product uses the Flickr API but is not endorsed or certified by SmugMug, Inc.
 
 Part of Derek Sivers's [now page movement](https://nownownow.com/about).
 

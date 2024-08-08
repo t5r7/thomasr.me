@@ -146,7 +146,7 @@ function getAgo(date) {
 	return `${minutesAgo} minute${minutesAgo>1?"s":""}`;
 }
 
-document.addEventListener("DOMContentLoaded", getStatusCafe);
+// document.addEventListener("DOMContentLoaded", getStatusCafe);
 document.addEventListener("DOMContentLoaded", getLastFM);
 // document.addEventListener("DOMContentLoaded", getSetlistFM);
 document.addEventListener("DOMContentLoaded", getFlickr);
