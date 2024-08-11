@@ -11,7 +11,7 @@ header#page-header {
 	margin-bottom: 2em;
 }
 
-#lastfm, #statuscafe, #flickr, #strava, #planestrains {
+#lastfm, #statuscafe, #flickr, #planestrains {
 	margin-bottom: 2em;
 	padding: 1em;
 	border: 1px solid var(--c);
@@ -68,18 +68,6 @@ a.img-link:hover img, a.img-link:focus img {
 	opacity: 0.8;
 }
 
-#strava {
-	padding: 0;
-}
-
-#strava iframe {
-	width: 100%;
-	/* height: 454px; /* awkward height from their embed code */
-	margin: 0;
-	padding: 0;
-	border: none;
-}
-
 #planestrains {
 	text-align: center;
 }
@@ -110,18 +98,11 @@ a.img-link:hover img, a.img-link:focus img {
 	<p>More <a href="{{ site.baseurl }}/journey-logging"><span class="emoji-icon">✈️</span><span class="emoji-icon">🚂</span> Journey Logging</a></p>
 </div>
 
-<div id="strava">
-	<iframe title="Strava Frame; summary of latest activities" src="https://www.strava.com/athletes/93454796/activity-summary/3963eabee1c38df288efc43c8f4260c4b334a99b"></iframe>
-</div>
-
 ---
 
-Looking for professional happenings? [LinkedIn](https://www.linkedin.com/in/t5r7) is the place to be!
-
----
-
-Data from [Last.fm](https://www.last.fm/user/itsmeimtom), [Flickr](https://www.flickr.com/photos/imtom), [RailMiles](https://yom.railmiles.me), and [Strava](https://www.strava.com/athletes/93454796). This product uses the Flickr API but is not endorsed or certified by SmugMug, Inc.
 
 Part of Derek Sivers's [now page movement](https://nownownow.com/about).
+
+Data from [Last.fm](https://www.last.fm/user/itsmeimtom), [Flickr](https://www.flickr.com/photos/imtom), and [RailMiles](https://yom.railmiles.me). This product uses the Flickr API but is not endorsed or certified by SmugMug, Inc.
 
 <script src="{{ site.baseurl }}/static/js/now.js">
