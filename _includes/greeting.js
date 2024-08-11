@@ -14,3 +14,23 @@ async function greet() {
 }
 
 window.addEventListener('load', greet);
+
+
+
+let emailClicked = false;
+function emailOnclick(e) {
+	if(!emailClicked) {
+		// rot13decode the email, thanks copilot!
+		e.innerText = e.innerText.replace(/[a-zA-Z]/g, function(c) {
+			return String.fromCharCode((c<="Z"?90:122)>=(c=c.charCodeAt(0)+13)?c:c-26);
+		});
+
+		// remove the text describing it as rot-13 encoded
+		document.getElementById('rot-13-text').remove();
+	}
+
+	// select the text
+	window.getSelection().setBaseAndExtent(e, 0, e, 1);
+
+	if(emailClicked == false) emailClicked = true;
+}
