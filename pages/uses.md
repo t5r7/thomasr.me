@@ -22,7 +22,7 @@ Inspired by [uses.tech](https://uses.tech/), here's my (not very interesting) co
 - Dell 'New' XPS 13 (i7&nbsp;1250U, 16GB), running Windows&nbsp;11
 - ThinkPad X280 (i5&nbsp;8350U, 8GB), running whatever Linux distro looks fun
 - Logitech MX Master 3 (main), Steelseries Rival 3 (gaming, portable)
-- <a href="{{ site.baseurl }}/keyboards">Keyboards</a> (I will not go down the rabbit hole, I will not go down the rabbit hole...)
+- Keychron K8 Pro (RGB, ISO), with stock keycaps and Kailh Super Speed switches ([MonkeyType](https://monkeytype.com/profile/tmr))
 - Sennheiser HD 58X Jubilee with Fosi DAC-Q4 (headphones, DAC)
 - Samson Go Microphone
 - ThinkPad Thunderbolt 3 Dock, model 40AC

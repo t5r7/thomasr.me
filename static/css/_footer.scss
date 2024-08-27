@@ -27,7 +27,7 @@ footer {
 	// }
 
 
-	border-top: 0.1em solid $cDark;
+	border-top: 0.2em solid $cDark;
 	@include in-light-mode() {
 		border-top-color: $cLight;
 	}
