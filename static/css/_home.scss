@@ -84,7 +84,7 @@ section {
 	}
 
 	&:target {
-		background-color: $cDark;
+		background-color: $cDarkest;
 
 		padding: 0.5em;
 		margin: 1em 0;
@@ -92,7 +92,7 @@ section {
 		border-radius: 0.2em;
 
 		@include in-light-mode {
-			background-color: $cLight;
+			background-color: $cLightest;
 		}
 
 		article.details-inner {
@@ -104,6 +104,23 @@ section {
 details summary {
 	cursor: pointer;
 	user-select: none;
+}
+
+article.details-inner {
+	a {
+		font-family: inherit;
+	}
+
+	ul {
+		margin-top: -1em;
+
+		list-style: none;
+		padding-left: 0;
+		
+		li {
+			margin: 0.5em 0;
+		}
+	}
 }
 
 @include on-big-screen {

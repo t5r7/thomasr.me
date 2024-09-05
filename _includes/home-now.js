@@ -45,7 +45,7 @@ async function nowLFM() {
 		document.getElementById("js-lp-ago").innerHTML = `I'm currently listening to`;
 	} else if (track.date && track.date.uts) {
 		const trackDate = new Date(track.date.uts * 1000);
-		document.getElementById("js-lp-ago").innerHTML = `${getAgo(trackDate)} ago, I listened to}`;
+		document.getElementById("js-lp-ago").innerHTML = capFirst(`${getAgo(trackDate)} ago, I listened to`);
 	}
 
 	document.getElementById("js-lp-name").innerHTML = trackName;
@@ -86,6 +86,7 @@ async function nowFlickr() {
 	document.getElementById("js-flickr-title").href = photoURL;
 	document.getElementById("js-flickr-location").innerHTML = photoLocation;
 	document.getElementById("js-flickr-date").innerHTML = `${photoTakenAgo}`;
+	document.getElementById("js-flickr-date").title = `${photoTakenDate.toLocaleString()}`;
 }
 
 async function flickrBG() {
@@ -109,8 +110,10 @@ async function flickrBG() {
 	document.getElementById("bg-cover").style.backgroundImage = `url(${photoURL})`;
 	
 	// there is no way to know when the image has loaded, so we just hope for the best here
-	document.getElementById("bg-cover").classList.add('loaded');
-	document.querySelector("header#home-header img").classList.add('loaded');
+	window.setTimeout(() => {
+		document.getElementById("bg-cover").classList.add('loaded');
+		document.querySelector("header#home-header img").classList.add('loaded');
+	}, 1000);
 
 }
 
@@ -128,6 +131,7 @@ async function getFlickrPhoto() {
 	return photoJSON;
 }
 
+// not sure but this section is most definitely not mine, likely stackoverflow or chatgpt
 function getAgo(date) {
 	const currentDate = new Date();
 	const timeDiff = Math.abs(currentDate - date);
@@ -140,10 +144,18 @@ function getAgo(date) {
 	const monthsAgo = Math.floor(weeksAgo / 4);
 
 	if (monthsAgo > 12) return `over a year`;
-	if (weeksAgo > 4) return `${monthsAgo} month${monthsAgo > 1 ? "s" : ""}`;
-	if (daysAgo > 7) return `${weeksAgo} week${weeksAgo > 1 ? "s" : ""}`;
-	if (hoursAgo > 24) return `${daysAgo} day${daysAgo > 1 ? "s" : ""}`;
-	if (minutesAgo > 60) return `${hoursAgo} hour${hoursAgo > 1 ? "s" : ""}`;
-	return `${minutesAgo} minute${minutesAgo > 1 ? "s" : ""}`;
+	if (weeksAgo > 4) return `${numberToEnglish(monthsAgo)} month${monthsAgo > 1 ? "s" : ""}`;
+	if (daysAgo > 7) return `${numberToEnglish(weeksAgo)} week${weeksAgo > 1 ? "s" : ""}`;
+	if (hoursAgo > 24) return `${numberToEnglish(daysAgo)} day${daysAgo > 1 ? "s" : ""}`;
+	if (minutesAgo > 60) return `${numberToEnglish(hoursAgo)} hour${hoursAgo > 1 ? "s" : ""}`;
+	return `${numberToEnglish(minutesAgo)} minute${minutesAgo > 1 ? "s" : ""}`;
 }
 
+
+// http://stackoverflow.com/questions/14766951/convert-digits-into-words-with-javascript
+function numberToEnglish(e, i) { var n, l, t, o, r, s, u, h, d, c, f, p = e.toString(), a = i || ""; if (0 === parseInt(p)) return "zero"; for (n = ["", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen"], l = ["", "", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety"], t = ["", "thousand", "million", "billion", "trillion", "quadrillion", "quintillion", "sextillion", "septillion", "octillion", "nonillion", "decillion", "undecillion", "duodecillion", "tredecillion", "quatttuor-decillion", "quindecillion", "sexdecillion", "septen-decillion", "octodecillion", "novemdecillion", "vigintillion", "centillion"], o = p.length, s = []; 0 < o;)r = o, s.push(p.slice(o = Math.max(0, o - 3), r)); if (u = s.length, t.length < u) return ""; for (f = [], d = 0; d < u; d++)parseInt(s[d]) && (1 === (h = s[d].split("").reverse().map(parseFloat))[1] && (h[0] += 10), (c = t[d]) && f.push(c), (c = n[h[0]]) && f.push(c), (c = l[h[1]]) && f.push(c), (h[0] || h[1]) && (h[2] || !d && u) && f.push(a), (c = n[h[2]]) && f.push(c + " hundred")); return f.reverse().join(" ") }
+
+function capFirst(string) {
+	 let s = string.trim();
+	return s.charAt(0).toUpperCase() + s.slice(1);
+}
