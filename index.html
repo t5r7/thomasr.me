@@ -4,6 +4,8 @@ title: Home
 permalink: /
 ---
 
+<aside id="bg-cover" aria-hidden="true"></aside>
+
 <section id="about">
     <h2 class="sr-only">About Me &amp; Links</h2>
 
@@ -17,8 +19,6 @@ permalink: /
         read about the <a href="{{ site.baseurl }}/lab"><span class="emoji-icon" aria-hidden="true">🌐</span> homelab</a> I&nbsp;babysit,
         or peruse my <a href="https://www.flickr.com/people/imtom/" rel="me"><span class="emoji-icon" aria-hidden="true">📷</span> photography</a>.
     </p>
-
-    <p>See what I'm up to on the <a href="{{ site.baseurl }}/now"><span class="emoji-icon" aria-hidden="true">🌟</span> now&nbsp;page</a>.</p>
 </section>
 
 <section id="contact">
@@ -28,4 +28,29 @@ permalink: /
         If you need it, my email address <span id="rot-13-text">(rot13-encoded) </span>is <em onclick="emailOnclick(this);">gbz@GbzE.zr</em>.
         <span class="smol" style="display: block;">(<span class="emoji-icon" aria-hidden="true">🗝️</span> PGP <a href="https://keys.openpgp.org/vks/v1/by-fingerprint/AAE3375755B3B3F9BDDA32FCF37203ADC98280D6">F372 03AD C982 80D6</a>)</span>
     </p>
+</section>
+
+<section id="now">
+    <h2 class="sr-only">Now</h2>
+    <!-- toggleable section -->
+    <details id="now-toggle">
+        <summary style="font-weight: bold;"><span class="emoji-icon" aria-hidden="true">🌟</span> What am I up to at the moment?</summary>
+        <article class="details-inner">
+            <p>Currently, I am:</p>
+            <ul>
+                <li><span class="emoji-icon" aria-hidden="true">🏡</span> Living between Birmingham and Portsmouth (term-time)</li>
+                <li><span class="emoji-icon" aria-hidden="true">⛰️</span> Trying to spend as much time as possible outside and travelling; check out my <a href="https://thomasr.dev/visited-stations-map/">visited stations</a>, <a href="https://yom.railmiles.me/">RailMiles</a>, and <a href="https://openflights.org/user/yom">OpenFlights profile</a></li>
+                <li><span class="emoji-icon" aria-hidden="true">🥾</span> Walking and hiking, currently enjoying <a href="https://www.strava.com/athletes/93454796">completing</a> trails</li>
+                <li><span class="emoji-icon" aria-hidden="true">🎓</span> Continuing to study for my degree, currently in my second-year</li>
+                <li><span class="emoji-icon" aria-hidden="true">🤓</span> Helping to run the <a href="https://netsoc.group">Computer Networking Society</a> at university, organising events, socials, and workshops</li>
+                <li><span class="emoji-icon" aria-hidden="true">👨‍💻</span> Looking for a placement for 2025/2026, doing something hands-on in IT</li>
+            </ul>
+
+            <div class="js-only">
+                <p>My most-played song in the last month, with <span id="js-mp-plays"></span> listens, is <a id="js-mp-name">Song Name</a> by <b id="js-mp-artist">Artist</b>. <span id="js-lp-ago">Time ago, I listened to</span> <a id="js-lp-name">Song Name</a> by <b id="js-lp-artist">Artist</b>. (<a href="https://www.last.fm/user/itsmeimtom">Last.fm</a>)</p>
+
+                <p>My last uploaded photo, <a id="js-flickr-title">Photo Name</a>, was taken <b id="js-flickr-date">days</b> ago from <b id="js-flickr-location">Place</b>. You're seeing it right now as the background of the site!</p>
+            </div>
+        </article>
+    </details>
 </section>

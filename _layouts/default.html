@@ -95,6 +95,9 @@ layout: compress
 			a#new-colour {
 				display: none;
 			}
+			.js-only {
+				display: none;
+			}
 		</style>
 	</noscript>
 </head>
@@ -128,7 +131,11 @@ layout: compress
 
 	{% if page.url == '/' %}
 		<script>
-			{% include greeting.js %}
+			{% include home.js %}
+		</script>
+
+		<script>
+			{% include home-now.js %}
 		</script>
 	{% endif %}
 </body>

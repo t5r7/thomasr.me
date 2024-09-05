@@ -45,7 +45,7 @@ a[href]:not(.butt) {
 	}
 	text-decoration: none;
 	font-weight: 700;
-	border-bottom: 0.2em solid $c;
+	border-bottom: 0.2em solid #0000;
 
 	&:has(.emoji-icon) {
 		display: inline-block;
