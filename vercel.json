@@ -20,7 +20,7 @@
       "destination": "https://thomasr.dev/flickr-toys/"
     },
     {
-      "source": "/flickr/map/stations(/*)",
+      "source": "/(flickr/map/stations|now|journey-logging)(/*)",
       "destination": "/#now"
     },
     {
@@ -60,8 +60,8 @@
       "destination": "https://wiki.tomr.me/lab/docs/domains"
     },
     {
-      "source": "/now(/*)",
-      "destination": "/#now"
+      "source": "/colophon(/*)",
+      "destination": "/ATTRIBUTION.txt"
     }
   ],
   "rewrites": [],
