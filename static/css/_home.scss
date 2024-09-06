@@ -85,11 +85,13 @@ section {
 
 	&:target {
 		background-color: $cDarkest;
-
-		padding: 0.5em;
-		margin: 1em 0;
-
 		border-radius: 0.2em;
+		padding: 1em;
+
+		// @include on-big-screen {
+		// 	padding-right: 1em;
+		// 	padding-bottom: 1em;
+		// }
 
 		@include in-light-mode {
 			background-color: $cLightest;
