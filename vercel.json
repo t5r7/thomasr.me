@@ -36,8 +36,8 @@
       "destination": "/uses"
     },
     {
-      "source": "/(lab|homelab)(/*)",
-      "destination": "https://wiki.tomr.me/lab"
+      "source": "/(homelab)(/*)",
+      "destination": "/lab"
     },
     {
       "source": "/(solihull|solcol)(/*)",
@@ -54,10 +54,6 @@
     {
       "source": "/(project|thing)(s?)/(\\w*)(/*)",
       "destination": "https://github.com/t5r7"
-    },
-    {
-      "source": "/domains(/*)",
-      "destination": "https://wiki.tomr.me/lab/docs/domains"
     },
     {
       "source": "/colophon(/*)",
