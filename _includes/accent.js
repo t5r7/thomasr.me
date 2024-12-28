@@ -13,9 +13,10 @@ function setColour(hue) {
 		return;
 	}
 
-	localStorage.setItem("last-colour", hue); 
+	localStorage.setItem("last-colour", hue);
 
-	document.querySelector('meta[name="theme-color"]').content = `hsl(${hue}, 40%, 50%)`;
+	document.querySelector('meta[name="theme-color"]').content =
+		`hsl(${hue}, 40%, 50%)`;
 
 	setCssAccent("Darkest", `hsl(${hue}, 40%, 5%)`);
 	setCssAccent("Dark", `hsl(${hue}, 50%, 25%)`);
@@ -48,7 +49,10 @@ window.addEventListener("DOMContentLoaded", randomAccent);
 
 // Rainbow Colour Bar (Summer Pride!!)
 const now = new Date();
-if ([5, 6, 7].includes(now.getMonth())) { // if June, July or Aug
+if ([5, 6, 7].includes(now.getMonth())) {
+	// if June, July or Aug
 	document.getElementById("colour-bar").classList.add("pride");
-	document.getElementById("colour-bar").setAttribute("title", "Happy Pride! <3");
+	document
+		.getElementById("colour-bar")
+		.setAttribute("title", "Happy Pride! <3");
 }
