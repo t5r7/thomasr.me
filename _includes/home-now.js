@@ -2,56 +2,14 @@
 
 const lastFMKey = atob("YTBmNDAyMGJmNzE0NTQwNTg4OTJiZDRhMzA5YWFiNGQ="); // please get your own keys, thanks :)
 const flickrKey = atob("MzJiOTFiYWFlYjlkZTJiYjRhZTkwY2ZhMjgxZjNjOGM=");
-let ran = false;
-let photoJSON = null; // set when bg loaded
 
-document.addEventListener("DOMContentLoaded", flickrBG);
-document.addEventListener("DOMContentLoaded", addToggleEventListener);
-
-function addToggleEventListener() {
-	if(window.location.hash.toLowerCase().includes('now')) {
-		// we need to open the toggle, and run the content if now in the hash
-		document.getElementById("now-toggle").open = true;
-		ran = true;
-		nowLFM();
-		nowFlickr();
-		return; // no need to add the event listener
-	}
-	
-	// if we're here, then no hash, so add the event listener
-	document.getElementById("now-toggle").addEventListener("toggle", function() {
-		window.location.hash = this.open ? "now" : "";
-
-		if(ran) return; // only get content once
-		ran = true;
-		nowLFM();
-		nowFlickr();
-	});
-}
+document.addEventListener("DOMContentLoaded", nowLFM); // last.fm - latest/most played tracks
+document.addEventListener("DOMContentLoaded", nowFlickr); // flickr - background and photo info
 
 async function nowLFM() {
 	// Get latest track
 	const latestTracks = await fetch(`https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=itsmeimtom&api_key=${lastFMKey}&format=json&limit=1`);
 	const latestTracksJSON = await latestTracks.json();
-
-	const track = latestTracksJSON.recenttracks.track[0];
-	const trackURL = track.url;
-	const trackName = track.name;
-	const trackArtist = track.artist["#text"];
-	const trackAlbum = track.album["#text"];
-	const trackImage = track.image[2]["#text"];
-
-	if (track["@attr"] && track["@attr"].nowplaying) {
-		document.getElementById("js-lp-ago").innerHTML = `I'm currently listening to`;
-	} else if (track.date && track.date.uts) {
-		const trackDate = new Date(track.date.uts * 1000);
-		document.getElementById("js-lp-ago").innerHTML = capFirst(`${getAgo(trackDate)} ago, I listened to`);
-	}
-
-	document.getElementById("js-lp-name").innerHTML = trackName;
-	document.getElementById("js-lp-name").href = trackURL;
-	document.getElementById("js-lp-artist").innerHTML = trackArtist;
-
 
 	// get most popular
 	// top track of given time period
@@ -64,32 +22,39 @@ async function nowLFM() {
 	const topTrackPlayCount = topTrack.playcount;
 	const topTrackImage = topTrack.image[2]["#text"];
 
-	document.getElementById("js-mp-name").innerHTML = topTrackName;
-	document.getElementById("js-mp-name").href = topTrackURL;
-	document.getElementById("js-mp-artist").innerHTML = topTrackArtist;
-	document.getElementById("js-mp-plays").innerHTML = topTrackPlayCount;
-}
+	// latest/current track
+	const track = latestTracksJSON.recenttracks.track[0];
+	const trackURL = track.url;
+	const trackName = track.name;
+	const trackArtist = track.artist["#text"];
+	const trackAlbum = track.album["#text"];
+	const trackImage = track.image[2]["#text"];
 
+	let currentOrPastIntro = "";
+	if (track["@attr"] && track["@attr"].nowplaying) {
+		currentOrPastIntro = `I'm currently listening to`;
+	} else if (track.date && track.date.uts) {
+		const trackDate = new Date(track.date.uts * 1000);
+		currentOrPastIntro = capFirst(`${getAgo(trackDate)} ago, I listened to`);
+	}
+
+	const listItem = document.createElement("li");
+
+	const emojiIcon = document.createElement("span");
+	emojiIcon.className = "emoji-icon";
+	emojiIcon.setAttribute("aria-hidden", "true");
+	emojiIcon.textContent = "🎧";
+
+	const textSpan = document.createElement("span");
+	textSpan.innerHTML = `In the last month I've listened to <a href="${topTrackURL}">${topTrackName}</a> by ${topTrackArtist} ${numberToEnglish(topTrackPlayCount)} times, making it my most-played track. ${currentOrPastIntro} <a href="${trackURL}">${trackName}</a> by ${trackArtist}. You can find me on <a href="https://www.last.fm/user/itsmeimtom">Last.fm</a> for more stats.`;
+
+	listItem.appendChild(emojiIcon);
+	listItem.appendChild(textSpan);
+
+	document.getElementById("js-now").appendChild(listItem);
+}
 
 async function nowFlickr() {
-	const p = await getFlickrPhoto();
-
-	const photoTitle = p.photo.title._content;
-	const photoURL = p.photo.urls.url[0]._content;
-	const photoLocation = `${p.photo.location.county._content}, ${p.photo.location.region._content}, ${p.photo.location.country._content}`;
-	const photoTakenDate = new Date(p.photo.dates.taken);
-	const photoTakenAgo = getAgo(photoTakenDate);
-	const photoUploadedDate = new Date(p.photo.dates.posted * 1000);
-	const photoUploadedAgo = getAgo(photoUploadedDate);
-
-	document.getElementById("js-flickr-title").innerHTML = photoTitle;
-	document.getElementById("js-flickr-title").href = photoURL;
-	document.getElementById("js-flickr-location").innerHTML = photoLocation;
-	document.getElementById("js-flickr-date").innerHTML = `${photoTakenAgo}`;
-	document.getElementById("js-flickr-date").title = `${photoTakenDate.toLocaleString()}`;
-}
-
-async function flickrBG() {
 	const p = await getFlickrPhoto();
 
 	const sizes = await fetch(`https://api.flickr.com/services/rest/?method=flickr.photos.getSizes&nojsoncallback=1&api_key=${flickrKey}&photo_id=${p.photo.id}&format=json`);
@@ -102,25 +67,48 @@ async function flickrBG() {
 	// get screen width
 	const screenWidth = window.innerWidth;
 	// get the size closest to the screen width (thank you copilot)
-	const photoURL = sizesList.reduce((prev, curr) => {
+	const photoBGURL = sizesList.reduce((prev, curr) => {
 		if (curr.width > screenWidth) return prev;
 		return curr;
 	}).source;
+
+	document.getElementById("bg-cover").style.backgroundImage = `url(${photoBGURL})`;
+
+	const photoTitle = p.photo.title._content;
+	const photoURL = p.photo.urls.url[0]._content;
+	// const photoLocation = `${p.photo.location.county._content}, ${p.photo.location.region._content}, ${p.photo.location.country._content}`;
+	const photoLocation = `${p.photo.location.county._content}, ${p.photo.location.country._content}`;
+	const photoTakenDate = new Date(p.photo.dates.taken);
+	const photoTakenAgo = getAgo(photoTakenDate);
+	const photoUploadedDate = new Date(p.photo.dates.posted * 1000);
+	const photoUploadedAgo = getAgo(photoUploadedDate);
+
+	const listItem = document.createElement("li");
+
+	const emojiIcon = document.createElement("span");
+	emojiIcon.className = "emoji-icon";
+	emojiIcon.setAttribute("aria-hidden", "true");
+	emojiIcon.textContent = "🖼️";
+
+	const textSpan = document.createElement("span");
+	textSpan.innerHTML = `I took <a href="${photoURL}">${photoTitle}</a> <span title="${photoTakenDate.toLocaleString()}">${photoTakenAgo} ago</span> in ${photoLocation} with a 
 	
-	document.getElementById("bg-cover").style.backgroundImage = `url(${photoURL})`;
-	
-	// there is no way to know when the image has loaded, so we just hope for the best here
-	window.setTimeout(() => {
+	It is currently the background of this page! I shared it ${photoUploadedAgo} ago.`;
+
+	listItem.appendChild(emojiIcon);
+	listItem.appendChild(textSpan);
+
+	// ok we now need to wait for the image to load before we can show it
+	const dummyImg = new Image();
+	dummyImg.src = photoBGURL;
+	dummyImg.onload = function() {
 		document.getElementById("bg-cover").classList.add('loaded');
 		document.querySelector("header#home-header img").classList.add('loaded');
-	}, 1000);
-
+		document.getElementById("js-now").appendChild(listItem);
+	}
 }
 
 async function getFlickrPhoto() {
-	// if we've already got the photo, return it
-	if(photoJSON !== null) return photoJSON;
-
 	const latestPhotos = await fetch(`https://api.flickr.com/services/rest/?method=flickr.people.getPublicPhotos&nojsoncallback=1&api_key=${flickrKey}&user_id=193606210@N05&per_page=1&format=json&page=1`);
 	const latestPhotosJSON = await latestPhotos.json();
 
@@ -144,11 +132,11 @@ function getAgo(date) {
 	const monthsAgo = Math.floor(weeksAgo / 4);
 
 	if (monthsAgo > 12) return `over a year`;
-	if (weeksAgo > 4) return `${numberToEnglish(monthsAgo)} month${monthsAgo > 1 ? "s" : ""}`;
-	if (daysAgo > 7) return `${numberToEnglish(weeksAgo)} week${weeksAgo > 1 ? "s" : ""}`;
-	if (hoursAgo > 24) return `${numberToEnglish(daysAgo)} day${daysAgo > 1 ? "s" : ""}`;
-	if (minutesAgo > 60) return `${numberToEnglish(hoursAgo)} hour${hoursAgo > 1 ? "s" : ""}`;
-	return `${numberToEnglish(minutesAgo)} minute${minutesAgo > 1 ? "s" : ""}`;
+	if (weeksAgo > 4) return `${numberToEnglish(monthsAgo)} month${monthsAgo > 1 ? "s" : ""}`.trim();
+	if (daysAgo > 7) return `${numberToEnglish(weeksAgo)} week${weeksAgo > 1 ? "s" : ""}`.trim();
+	if (hoursAgo > 24) return `${numberToEnglish(daysAgo)} day${daysAgo > 1 ? "s" : ""}`.trim();
+	if (minutesAgo > 60) return `${numberToEnglish(hoursAgo)} hour${hoursAgo > 1 ? "s" : ""}`.trim();
+	return `${numberToEnglish(minutesAgo)} minute${minutesAgo > 1 ? "s" : ""}`.trim();
 }
 
 

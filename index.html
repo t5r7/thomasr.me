@@ -7,7 +7,7 @@ permalink: /
 <aside id="bg-cover" aria-hidden="true"></aside>
 
 <section id="about">
-    <h2 class="sr-only">About Me &amp; Links</h2>
+    <h2 class="section-title">About &amp; Links</h2>
 
     <p>
         I am an IT student, pursuing a degree in Computer Networks &amp; Security at the University of Portsmouth. I'm interested in most everything related to computing and technology, especially networking and systems administration.
@@ -21,41 +21,51 @@ permalink: /
     </p>
 </section>
 
-<section id="contact">
-    <h2 class="sr-only">Contact</h2>
-
-    <p>
-        If you need it, my email address <span id="rot-13-text">(rot13-encoded) </span>is <em onclick="emailOnclick(this);">gbz@GbzE.zr</em>.
-        <span class="smol" style="display: block;">(<span class="emoji-icon" aria-hidden="true">🗝️</span> PGP key, for encrypted messages: <a href="https://keys.openpgp.org/vks/v1/by-fingerprint/AAE3375755B3B3F9BDDA32FCF37203ADC98280D6">F372 03AD C982 80D6</a>)</span>
-    </p>
-</section>
+<hr>
 
 <section id="now">
-    <h2 class="sr-only">Now</h2>
+    <h2 class="section-title">Now</h2>
     <!-- toggleable section -->
-    <details id="now-toggle">
-        <summary style="font-weight: bold;"><span class="emoji-icon" aria-hidden="true">🌟</span> What am I up to at the moment?</summary>
-        <article class="details-inner">
-            <p>Currently, I am:</p>
+    <!-- <details id="now-toggle"> -->
+        <!-- <summary style="font-weight: bold;"><span class="emoji-icon" aria-hidden="true">🌟</span> What am I up to at the moment?</summary> -->
+        <!-- <article class="details-inner"> -->
+            <p><em><a href="https://nownownow.com/about">Now</a>!</em> Outside of the above, here's what I have been up to recently:</p>          
             <ul>
-                <li><span class="emoji-icon" aria-hidden="true">🏡</span> Living in Portsmouth + Birmingham</li>
-                <li><span class="emoji-icon" aria-hidden="true">⛰️</span> Trying to spend as much time as possible outside and travelling; check out my <a href="https://thomasr.dev/visited-stations-map/">visited stations</a>, <a href="https://yom.railmiles.me/">RailMiles</a>, and <a href="https://openflights.org/user/yom">OpenFlights profile</a></li>
-                <li><span class="emoji-icon" aria-hidden="true">🥾</span> Keeping active by walking and hiking; see where I've been on <a href="https://www.strava.com/athletes/93454796">Strava</a></li>
-                <li><span class="emoji-icon" aria-hidden="true">💸</span> Babysitting my <a href="{{ site.baseurl }}/lab">homelab</a>, continuously learning and experimenting</a>
-                <li><span class="emoji-icon" aria-hidden="true">📷</span> Taking too many <a href="https://www.flickr.com/people/imtom/">photos</a>, and trying not to buy too many cheap&nbsp;/&nbsp;interesting old digital cameras</a>
-                <li><span class="emoji-icon" aria-hidden="true">🤓</span> Helping to run the <a href="https://netsoc.group">Computer Networking Society</a> at university, organising events, socials, and workshops</li>
+                <li>
+                    <span class="emoji-icon" aria-hidden="true">🏡</span> 
+                    <span>Spending most of my time in Portsmouth at University, but returning home to Birmingham during holidays and breaks. Soon to start a 12-month internship in London; my wallet is more apprehensive than I am.</span>
+                </li>
+                <li>
+                    <span class="emoji-icon" aria-hidden="true">⛰️</span>
+                    <span>Going outside and exploring! I keep a log of my <a href="https://thomasr.dev/visited-stations-map/">visited stations</a>, <a href="https://yom.railmiles.me/">rail journeys</a>, and <a href="https://openflights.org/user/yom">flight history</a>&mdash;because trains, data, statistics, and maps are cool.
+                    </span> 
+                </li>
+                <li>
+                    <span class="emoji-icon" aria-hidden="true">🥾</span>
+                    <span>Keeping active by hiking and rambling across the countryside. I enjoy working towards completing paths and trails, like the South Downs Way and the North Worcestershire Path. You can hold me accountable via <a href="https://www.strava.com/athletes/93454796">Strava</a>.</span>
+                </li>
+
+                <div id="js-now">
+                    <!-- dynamically fetched information -->
+                </div>
+
             </ul>
-
-            <div class="js-only">
-                <p>My most-played song in the last month, with <span id="js-mp-plays"></span> listens, is <a id="js-mp-name">Song Name</a> by <b id="js-mp-artist">Artist</b>. <span id="js-lp-ago">Time ago, I listened to</span> <a id="js-lp-name">Song Name</a> by <b id="js-lp-artist">Artist</b>. (<a href="https://www.last.fm/user/itsmeimtom">Last.fm</a>)</p>
-
-                <p>My latest shared photo, <a id="js-flickr-title">Photo Name</a>, was taken <b id="js-flickr-date">days</b> ago from <b id="js-flickr-location">Place</b>. You're seeing it right now as the background of the site!</p>
-            </div>
 <!-- 
             <div style="display: flex; justify-content: space-evenly; align-items: top;">
                 <a href="https://yom.railmiles.me" style="background-color: #fff;"><img src="https://public.railmiles.me/signatures/3560e69400242162df2413a6e10a1264.png" style="width: 100%; padding-top: 8px; background-color: #fff;" alt="Image from RailMiles, showing statistics about my rail history."></a>
                 <a href="https://openflights.org/user/yom" style="background-color: #7391ad;"><img src="https://openflights.org/banner/yom.png" style="width: 100%;" alt="Image from OpenFlights, showing statistics about my flight history."></a>
             </div> -->
-        </article>
-    </details>
+        <!-- </article> -->
+    <!-- </details> -->
+</section>
+
+<hr>
+
+<section id="contact">
+    <h2 class="section-title">Contact</h2>
+
+    <p>
+        If you need it, my email address <span id="rot-13-text">(rot13-encoded) </span>is <em onclick="emailOnclick(this);">gbz@GbzE.zr</em>.
+        <span class="smol" style="display: block;">(<span class="emoji-icon" aria-hidden="true">🗝️</span> PGP key, for encrypted messages: <a href="https://keys.openpgp.org/vks/v1/by-fingerprint/AAE3375755B3B3F9BDDA32FCF37203ADC98280D6">F372 03AD C982 80D6</a>)</span>
+    </p>
 </section>
