@@ -3,8 +3,8 @@
 const lastFMKey = atob("YTBmNDAyMGJmNzE0NTQwNTg4OTJiZDRhMzA5YWFiNGQ="); // please get your own keys, thanks :)
 const flickrKey = atob("MzJiOTFiYWFlYjlkZTJiYjRhZTkwY2ZhMjgxZjNjOGM=");
 
-document.addEventListener("DOMContentLoaded", nowLFM); // last.fm - latest/most played tracks
 document.addEventListener("DOMContentLoaded", nowFlickr); // flickr - background and photo info
+document.addEventListener("DOMContentLoaded", nowLFM); // last.fm - latest/most played tracks
 
 async function nowLFM() {
 	// Get latest track
@@ -91,7 +91,7 @@ async function nowFlickr() {
 	emojiIcon.textContent = "🖼️";
 
 	const textSpan = document.createElement("span");
-	textSpan.innerHTML = `I took <a href="${photoURL}">${photoTitle}</a> <span title="${photoTakenDate.toLocaleString()}">${photoTakenAgo} ago</span> in ${photoLocation} with a 
+	textSpan.innerHTML = `I took <a href="${photoURL}">${photoTitle}</a> <span title="${photoTakenDate.toLocaleString()}">${photoTakenAgo} ago</span> in ${photoLocation} 
 	
 	It is currently the background of this page! I shared it ${photoUploadedAgo} ago.`;
 
