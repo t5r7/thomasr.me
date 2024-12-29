@@ -147,7 +147,7 @@ section#now {
 		}
 	}
 
-	div#js-now li {
+	li.now-item-js {
 		opacity: 0;
 		animation: fadeIn 1s forwards;
 		transform-origin: top;

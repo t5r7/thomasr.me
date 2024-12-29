@@ -45,6 +45,7 @@ async function nowLFM() {
 	}
 
 	const listItem = document.createElement("li");
+	listItem.setAttribute("class", "now-item-js");
 
 	const emojiIcon = document.createElement("span");
 	emojiIcon.className = "emoji-icon";
@@ -57,7 +58,7 @@ async function nowLFM() {
 	listItem.appendChild(emojiIcon);
 	listItem.appendChild(textSpan);
 
-	document.getElementById("js-now").appendChild(listItem);
+	document.getElementById("now-list").appendChild(listItem);
 }
 
 async function nowFlickr() {
@@ -93,6 +94,7 @@ async function nowFlickr() {
 	const photoUploadedAgo = getAgo(photoUploadedDate);
 
 	const listItem = document.createElement("li");
+	listItem.setAttribute("class", "now-item-js");
 
 	const emojiIcon = document.createElement("span");
 	emojiIcon.className = "emoji-icon";
@@ -115,7 +117,7 @@ async function nowFlickr() {
 		document
 			.querySelector("header#home-header img")
 			.classList.add("loaded");
-		document.getElementById("js-now").appendChild(listItem);
+		document.getElementById("now-list").appendChild(listItem);
 	};
 }
 
