@@ -102,9 +102,7 @@ async function nowFlickr() {
 	emojiIcon.textContent = "🖼️";
 
 	const textSpan = document.createElement("span");
-	textSpan.innerHTML = `I took <a href="${photoURL}">${photoTitle}</a> <span title="${photoTakenDate.toLocaleString()}">${photoTakenAgo} ago</span> in ${photoLocation} 
-	
-	It is currently the background of this page! I shared it ${photoUploadedAgo} ago.`;
+	textSpan.innerHTML = `I took <a href="${photoURL}">${photoTitle}</a> <span title="${photoTakenDate.toLocaleString()}">${photoTakenAgo} ago</span> in ${photoLocation}. I shared it ${photoUploadedAgo} ago, and it is currently the background of this page!`;
 
 	listItem.appendChild(emojiIcon);
 	listItem.appendChild(textSpan);
