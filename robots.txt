@@ -6,8 +6,7 @@ Disallow: /
 {% else %}# I'll make my own robots.txt file, with blackjack - and hookers!
 
 User-Agent: *
-Sitemap: {{ site.url }}/sitemap.xml # Pages on this site
-Sitemap: https://github-sitemap.thomasr.me/sitemap.xml # GitHub Pages sites
+Sitemap: {{ site.url }}/sitemap.xml
 {% for page in site.pages %}{% if page.hidden %}Disallow: {{ page.url }} # added automatically{% endif %}{% endfor %}
 
 User-Agent: ia_archiver
