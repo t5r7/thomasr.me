@@ -20,11 +20,11 @@ jobs:
       uses: easingthemes/ssh-deploy@v2.1.1
       env:
         SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-        ARGS: "-rzv --delete --delete-excluded --chmod=ugo-rwx,u+rwx,g+rx"
         SOURCE: "./_site/"
         REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
         REMOTE_USER: ${{ secrets.REMOTE_USER }}
         TARGET: ${{ secrets.TARGET }}
+        ARGS: "-rzv --delete --delete-excluded --chown=www-data:www-data --chmod=ugo-rwx,u+rwx,g+rx"
 
     # - name: Purge Cloudflare Cache
     #  uses: jakejarvis/cloudflare-purge-action@v0.3.0
