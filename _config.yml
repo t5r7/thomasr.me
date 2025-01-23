@@ -22,6 +22,3 @@ compress_html:
 
 plugins:
   - jekyll-sitemap
-
-exclude:
-  - vercel.json
