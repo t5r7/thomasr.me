@@ -16,13 +16,13 @@ function setColour(hue) {
 	localStorage.setItem("last-colour", hue);
 
 	document.querySelector('meta[name="theme-color"]').content =
-		`hsl(${hue}, 40%, 50%)`;
+		`hsl(${hue}, 50%, 45%)`;
 
-	setCssAccent("Darkest", `hsl(${hue}, 40%, 5%)`);
-	setCssAccent("Dark", `hsl(${hue}, 50%, 25%)`);
-	setCssAccent("", `hsl(${hue}, 50%, 40%)`);
-	setCssAccent("Light", `hsl(${hue}, 50%, 75%)`);
-	setCssAccent("Lightest", `hsl(${hue}, 40%, 95%)`);
+	setCssAccent("Darkest", `hsl(${hue}, 50%, 10%)`);
+	setCssAccent("Dark", `hsl(${hue}, 60%, 30%)`);
+	setCssAccent("", `hsl(${hue}, 60%, 45%)`);
+	setCssAccent("Light", `hsl(${hue}, 60%, 70%)`);
+	setCssAccent("Lightest", `hsl(${hue}, 50%, 90%)`);
 
 	document.querySelector("html").style["visibility"] = "visible";
 }

@@ -34,11 +34,11 @@ aside#colour-bar {
 	}
 }
 
-a, em {
+em {
 	font-family: $fonts-fancy;
 }
 
-a[href]:not(.butt) {
+a[href] {
 	color: $cLight;
 	@include in-light-mode() {
 		color: $cDark;
@@ -46,11 +46,6 @@ a[href]:not(.butt) {
 	text-decoration: none;
 	font-weight: 700;
 	border-bottom: 0.2em solid #0000;
-
-	&:has(.emoji-icon) {
-		display: inline-block;
-  		margin-bottom: -0.2em;
-	}
 
 	&:hover,
 	&:focus {
@@ -72,31 +67,6 @@ a[href]:not(.butt) {
 	}
 }
 
-a[href].butt {
-	display: inline-block;
-	padding: 0.1em 0.2em;
-	margin: 0 0.1em;
-	border: 0.15em solid $c;
-	color: $cLight;
-	font-weight: 400;
-
-	@include in-light-mode() {
-		color: $cDark;
-	}
-	text-decoration: none;
-
-	&:hover,
-	&:focus {
-		background-color: $cLightest;
-		color: $cDarkest;
-
-		@include in-light-mode() {
-			background-color: $cDarkest;
-			color: $cLightest;
-		}
-	}
-}
-
 hr {
 	border: 0;
 	border-top: 0.1em solid $c;
@@ -109,10 +79,6 @@ hr {
 	width: 1.25em;
 	text-align: center;
 	filter: saturate(75%);
-
-	&.external-link {
-		font-size: 80%;
-	}
 }
 
 .smol {
@@ -155,8 +121,4 @@ article {
 			margin-top: 1.5em;
 		}
 	}
-}
-
-summary {
-	cursor: pointer;
 }

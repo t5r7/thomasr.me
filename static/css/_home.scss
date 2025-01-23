@@ -76,6 +76,14 @@ header#home-header {
 	}
 }
 
+section#about a {
+	font-family: $fonts-fancy;
+
+	&:has(.emoji-icon) {
+		display: inline-block;
+	}
+}
+
 section {
 	font-size: 110%;
 
@@ -116,11 +124,6 @@ section {
 			display: block;
 		}
 	}
-}
-
-details summary {
-	cursor: pointer;
-	user-select: none;
 }
 
 section#now {

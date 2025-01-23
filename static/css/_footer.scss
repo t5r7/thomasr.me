@@ -16,16 +16,11 @@ footer {
 	@include on-big-screen() {
 		display: flex;
 		justify-content: space-between;
-		
-		p {
-			font-size: 0.8em;
-		}
 	}
 	
 	@include on-small-screen() {
 		text-align: center;
 	}
-
 
 	border-top: 0.2rem solid $cDark;
 

@@ -16,9 +16,11 @@ highlighter: rouge
 
 compress_html:
   blanklines: true
-  comments: "all"
-  ignore:
-    envs: ["development"]
+  # ignore:
+  #   envs: ["development"]
 
 plugins:
   - jekyll-sitemap
+
+exclude:
+  - README.md
