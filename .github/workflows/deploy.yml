@@ -16,15 +16,15 @@ jobs:
     - name: Build
       uses: t5r7/jekyll-build-action@4a276d32d79bd803b14b3d5ba62cf6441f10b80f
 
-    # - name: Deploy to Server
-    #  uses: easingthemes/ssh-deploy@v2.1.1
-    #  env:
-    #    SSH_PRIVATE_KEY: $
-    #    ARGS: "-rzv --delete --delete-excluded --chmod=g+rwx"
-    #    SOURCE: "./_site/"
-    #    REMOTE_HOST: $
-    #    REMOTE_USER: $
-    #    TARGET: $
+    - name: Deploy to Server
+      uses: easingthemes/ssh-deploy@v2.1.1
+      env:
+        SSH_PRIVATE_KEY: $
+        ARGS: "-rzv --delete --delete-excluded --chmod=ugo-rwx,u+rwx,g+rx"
+        SOURCE: "./_site/"
+        REMOTE_HOST: $
+        REMOTE_USER: $
+        TARGET: $
 
     # - name: Purge Cloudflare Cache
     #  uses: jakejarvis/cloudflare-purge-action@v0.3.0
