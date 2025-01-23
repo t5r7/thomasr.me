@@ -25,9 +25,9 @@ jobs:
         REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
         REMOTE_USER: ${{ secrets.REMOTE_USER }}
         TARGET: ${{ secrets.TARGET }}
-
-    # - name: Purge Cloudflare Cache
-    #  uses: jakejarvis/cloudflare-purge-action@v0.3.0
-    #  env:
-    #    CLOUDFLARE_ZONE: $
-    #    CLOUDFLARE_TOKEN: $
+        
+    - name: Purge Cloudflare Cache
+      uses: jakejarvis/cloudflare-purge-action@v0.3.0
+      env:
+        CLOUDFLARE_ZONE: ${{ secrets.CLOUDFLARE_ZONE }}
+        CLOUDFLARE_TOKEN: ${{ secrets.CLOUDFLARE_TOKEN }}
