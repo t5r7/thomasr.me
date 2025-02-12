@@ -103,6 +103,7 @@ main {
 	max-width: $width;
 	margin: 0 auto;
 	line-height: 1.75em;
+    text-wrap: balance;
 
 	@include on-small-screen() {
 		padding: 0 1em;
