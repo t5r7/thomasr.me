@@ -5,7 +5,7 @@ footer {
 	opacity: 0.8;
 
 	a {
-		font-weight: normal;
+		/* font-weight: normal; */
 		font-family: inherit;
 
 		&#attribution {
@@ -17,7 +17,7 @@ footer {
 		display: flex;
 		justify-content: space-between;
 	}
-	
+
 	@include on-small-screen() {
 		text-align: center;
 	}
@@ -35,7 +35,6 @@ footer {
 
 		span#stay-alive-text {
 			opacity: 0;
-			font-style: italic;
 
 			@include on-small-screen() {
 				display: block;
@@ -48,7 +47,7 @@ footer {
 				opacity: 1;
 			}
 		}
-		
+
 		&:hover:not(:focus) {
 			color: $c;
 		}

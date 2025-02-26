@@ -20,8 +20,8 @@
 
     --width: 40em;
 
-    --fonts: 'Atkinson Hyperlegible', 'Verdana', 'Tahoma', 'Helvetica', sans-serif;
-	--fonts-fancy: 'Libre Baskerville', 'Baskerville', 'Baskerville Old Face', 'Georgia', 'Times New Roman', serif;
+    --fonts: 'Atkinson Hyperlegible Next', 'Verdana', 'Tahoma', 'Helvetica', sans-serif;
+	--fonts-fancy: --fonts; // used to be: 'Libre Baskerville', 'Baskerville', 'Baskerville Old Face', 'Georgia', 'Times New Roman', serif;
 }
 
 $cDarkest: var(--cDarkest);
@@ -34,7 +34,6 @@ $fonts: var(--fonts, sans-serif);
 $fonts-fancy: var(--fonts-fancy, serif);
 $width: var(--width, 40em);
 
-@import 'fonts/libre-baskerville.scss';
 @import 'fonts/atkinson-hyperlegible.scss';
 @import 'core';
 @import 'headers';
