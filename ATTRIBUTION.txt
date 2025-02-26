@@ -34,8 +34,10 @@ FONTS
 ========================
 
 Atkinson Hyperlegible Next font
-	Designed by Braille Institute, Applied Design Works, Letters From Sweden, Elliott Scott, Megan Eiswerth, Linus Boman, Theodore Petrosky
+	Designed by Braille Institute, Applied Design Works, Letters From Sweden,
+	Elliott Scott, Megan Eiswerth, Linus Boman, Theodore Petrosky
 	https://brailleinstitute.org/freefont
+	https://fonts.google.com/specimen/Atkinson+Hyperlegible+Next
 
 ========================
 "NOW" & BACKGROUND IMAGE
@@ -44,7 +46,3 @@ Atkinson Hyperlegible Next font
 Music data from Last.fm
 	https://www.last.fm/api
 	Powered by AudioScrobbler.
-
-Photo data from Flickr
-	https://www.flickr.com/services/api/
-	This product uses the Flickr API but is not endorsed or certified by SmugMug, Inc.

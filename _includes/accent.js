@@ -18,11 +18,11 @@ function setColour(hue) {
   document.querySelector('meta[name="theme-color"]').content =
     `hsl(${hue}, 50%, 45%)`;
 
-  setCssAccent("Darkest", `hsl(${hue}, 50%, 5%)`);
-  setCssAccent("Dark", `hsl(${hue}, 60%, 30%)`);
-  setCssAccent("", `hsl(${hue}, 60%, 45%)`);
-  setCssAccent("Light", `hsl(${hue}, 60%, 70%)`);
-  setCssAccent("Lightest", `hsl(${hue}, 50%, 90%)`);
+  setCssAccent("Darkest", `hsl(${hue}, 100%, 5%)`);
+  setCssAccent("Dark", `hsl(${hue}, 100%, 30%)`);
+  setCssAccent("", `hsl(${hue}, 100%, 50%)`);
+  setCssAccent("Light", `hsl(${hue}, 100%, 70%)`);
+  setCssAccent("Lightest", `hsl(${hue}, 100%, 95%)`);
 
   document.querySelector("html").style["visibility"] = "visible";
 }
@@ -37,7 +37,7 @@ function randomAccent() {
     // while new colour is too similar to last colour
     let newColour = getHue();
 
-    while (Math.abs(newColour - lastColour) < 40) {
+    while (Math.abs(newColour - lastColour) < 50) {
       newColour = getHue();
     }
 
