@@ -12,16 +12,16 @@
 }
 
 :root {
-    --cDarkest: hsl(180, 40%, 5%);
-    --cDark: hsl(180, 50%, 25%);
-    --c: hsl(180, 50%, 40%);
-    --cLight: hsl(180, 50%, 75%);
-    --cLightest: hsl(180, 40%, 95%);
+    --cDarkest: hsl(174, 100%, 5%);
+    --cDark: hsl(174, 100%, 30%);
+    --c: hsl(174, 100%, 50%);
+    --cLight: hsl(174, 100%, 70%);
+    --cLightest: hsl(174, 100%, 95%);
 
     --width: 40em;
 
-    --fonts: 'Atkinson Hyperlegible Next', 'Verdana', 'Tahoma', 'Helvetica', sans-serif;
-	--fonts-fancy: --fonts; // used to be: 'Libre Baskerville', 'Baskerville', 'Baskerville Old Face', 'Georgia', 'Times New Roman', serif;
+    --fonts: 'Atkinson Hyperlegible Next', 'Atkinson Hyperlegible', 'Verdana', 'Tahoma', 'Helvetica', sans-serif;
+	--fonts-fancy: $fonts; // used to be: 'Libre Baskerville', 'Baskerville', 'Baskerville Old Face', 'Georgia', 'Times New Roman', serif;
 }
 
 $cDarkest: var(--cDarkest);
