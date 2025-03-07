@@ -108,30 +108,4 @@ section#now {
 			}
 		}
 	}
-
-	li.now-item-js {
-		opacity: 0;
-		animation: fadeIn 1s forwards;
-		transform-origin: top;
-	}
-}
-
-@keyframes fadeIn {
-	0% {
-		height: 0;
-		opacity: 0;
-		transform: scaleY(0);
-	}
-
-	50% {
-		height: auto; // animating to "auto" is not yet widely supported
-		opacity: 0;
-		transform: scaleY(0);
-	}
-
-	100% {
-		opacity: 1;
-		height: auto;
-		transform: scaleY(1);
-	}
 }

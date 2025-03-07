@@ -5,18 +5,31 @@ const lastFMKey = atob("YTBmNDAyMGJmNzE0NTQwNTg4OTJiZDRhMzA5YWFiNGQ="); // pleas
 document.addEventListener("DOMContentLoaded", nowLFM); // last.fm - latest/most played tracks
 
 async function nowLFM() {
-  // Get latest track
-  const latestTracks = await fetch(
-    `https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=itsmeimtom&api_key=${lastFMKey}&format=json&limit=1`
-  );
-  const latestTracksJSON = await latestTracks.json();
+  document.querySelector('#now-music').style.display = 'flex';
 
-  // get most popular
-  // top track of given time period
-  const topTracks = await fetch(
-    `https://ws.audioscrobbler.com/2.0/?method=user.gettoptracks&period=1month&user=itsmeimtom&api_key=${lastFMKey}&format=json&limit=1`
-  );
-  const topTracksJSON = await topTracks.json();
+  let latestTracks, topTracks, latestTracksJSON, topTracksJSON;
+
+  try {
+    // Get latest track
+    latestTracks = await fetch(
+      `https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=itsmeimtom&api_key=${lastFMKey}&format=json&limit=1`
+    );
+    latestTracksJSON = await latestTracks.json();
+
+    // get most popular
+    // top track of given time period
+    topTracks = await fetch(
+      `https://ws.audioscrobbler.com/2.0/?method=user.gettoptracks&period=1month&user=itsmeimtom&api_key=${lastFMKey}&format=json&limit=1`
+    );
+    topTracksJSON = await topTracks.json();
+  }
+  catch (error) {
+    console.error("Error fetching last.fm data", error);
+    return document.querySelector('#now-music').style.display = 'none';
+  }
+
+  if (!topTracks.ok && !latestTracks.ok) return document.querySelector('#now-music').style.display = 'none';
+
   const topTrack = topTracksJSON.toptracks.track[0];
   const topTrackURL = topTrack.url;
   const topTrackName = topTrack.name;
@@ -26,11 +39,11 @@ async function nowLFM() {
 
   // latest/current track
   const track = latestTracksJSON.recenttracks.track[0];
-  const trackURL = track.url;
-  const trackName = track.name;
-  const trackArtist = track.artist["#text"];
-  const trackAlbum = track.album["#text"];
-  const trackImage = track.image[2]["#text"];
+  const currentTrackURL = track.url;
+  const currentTrackName = track.name;
+  const currentTrackArtist = track.artist["#text"];
+  const currentTrackAlbum = track.album["#text"];
+  const currentTrackImage = track.image[2]["#text"];
 
   let currentOrPastIntro = "";
   if (track["@attr"] && track["@attr"].nowplaying) {
@@ -42,21 +55,15 @@ async function nowLFM() {
     );
   }
 
-  const listItem = document.createElement("li");
-  listItem.setAttribute("class", "now-item-js");
+  document.querySelector('#now-music-top-name').textContent = topTrackName;
+  document.querySelector('#now-music-top-name').setAttribute('href', topTrackURL);
+  document.querySelector('#now-music-top-artist').textContent = topTrackArtist;
+  document.querySelector('#now-music-top-listens').textContent = numberToEnglish(topTrackPlayCount);
 
-  const emojiIcon = document.createElement("span");
-  emojiIcon.className = "emoji-icon";
-  emojiIcon.setAttribute("aria-hidden", "true");
-  emojiIcon.textContent = "🎧";
-
-  const textSpan = document.createElement("span");
-  textSpan.innerHTML = `In the last month I've listened to <a href="${topTrackURL}">${topTrackName}</a> by ${topTrackArtist} ${numberToEnglish(topTrackPlayCount)} times, making it my most-played track. ${currentOrPastIntro} <a href="${trackURL}">${trackName}</a> by ${trackArtist}. You can find me on <a href="https://www.last.fm/user/itsmeimtom">Last.fm</a> for more stats.`;
-
-  listItem.appendChild(emojiIcon);
-  listItem.appendChild(textSpan);
-
-  document.querySelector("#now-list").appendChild(listItem);
+  document.querySelector('#now-music-current-intro').textContent = currentOrPastIntro;
+  document.querySelector('#now-music-current-name').textContent = currentTrackName;
+  document.querySelector('#now-music-current-name').setAttribute('href', currentTrackURL);
+  document.querySelector('#now-music-current-artist').textContent = currentTrackArtist;
 }
 
 // not sure but this section is most definitely not mine, likely stackoverflow or chatgpt
