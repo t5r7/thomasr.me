@@ -10,8 +10,8 @@ ul span[aria-hidden="true"] { display: inline-block; font-size: 1.2em; margin-ri
 </style>
 
 * <span aria-hidden="true">🎓</span>
-  Currently pursuing a degree in [Computer Networks & Security](https://www.port.ac.uk/study/courses/undergraduate/bsc-hons-computer-networks-and-security).
-* <span aria-hidden="true">🇬🇧</span> From Birmingham, studying in Portsmouth, but&hellip;
+  Currently pursuing a degree in [Computer&nbsp;Networks&nbsp;&&nbsp;Security](https://www.port.ac.uk/study/courses/undergraduate/bsc-hons-computer-networks-and-security).
+* <span aria-hidden="true">🇬🇧</span> From Birmingham, studying at the University&nbsp;of&nbsp;Portsmouth, but&hellip;
 * <span aria-hidden="true">💸</span> &hellip;imminently starting a year-long placement as a Network Operations Analyst in London.
 * <span aria-hidden="true">👔</span> You can find my professional profile on [LinkedIn](https://linkedin.com/in/t5r7), or get in touch for my CV.
 * <span aria-hidden="true">👨‍💻</span> I babysit a [homelab]({{site.baseurl}}lab); a true menagerie of devices and technologies for tinkering with.

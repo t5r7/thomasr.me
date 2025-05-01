@@ -22,6 +22,10 @@ body {
     font-family: var(--fonts);
     font-size: 1.1rem;
     padding: 1rem;
+
+    @media (max-width: 750px) {
+        font-size: 1.4rem;
+    }
 }
 
 header,
