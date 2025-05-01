@@ -1,9 +1,24 @@
 <footer>
-	<p>
-		<a href="{{ site.baseurl }}/ATTRIBUTION.txt" id="attribution">Attribution</a>
-	</p>
-
-	<p>
-		<a href="https://www.youtube.com/watch?v=657TZDHZqj4" id="stay-alive" aria-hidden="true" tabindex="-1"><span id="stay-alive-text">Stay Alive.</span> <span class="emoji-icon" aria-hidden="true">💖</span></a>
-	</p>
+    <p>💖</p>
 </footer>
+
+{% if page.url == site.baseurl %}
+<script defer>
+function setHomepageGreeting() {
+  const title = document.querySelector('header h1');
+  const oldGreeting = 'Hello';
+  let newGreeting = 'Hello';
+
+  const h = new Date().getHours();
+  if (h >= 0 && h < 12) newGreeting = "Good&nbsp;Morning"; // 5-12
+  if (h >= 12 && h < 18) newGreeting = "Good&nbsp;Afternoon"; // 12-18
+  if (h >= 18 && h < 22) newGreeting = "Good&nbsp;Evening"; // 18-22
+  if (h >= 22) newGreeting = "Good&nbsp;Evening"; // 22-23
+
+  if(oldGreeting === newGreeting) return;
+  title.innerHTML = title.innerHTML.replace(oldGreeting, newGreeting);
+}
+
+setHomepageGreeting();
+</script>
+{% endif %}

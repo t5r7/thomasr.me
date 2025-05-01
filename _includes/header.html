@@ -1,0 +1,9 @@
+{% if page.url == site.baseurl %}
+<header id="site-header">
+    <h1><span aria-hidden="true">👋🏻</span> <span>Hello,</span> I'm&nbsp;Tom!</h1>
+</header>
+{% else %}
+<header id="site-header">
+    <h1><a title="Back to the homepage of {{ site.title }}" href="{{ site.baseurl }}"><span aria-hidden="true">🡰</span> {{ site.title }}</a></h1>
+</header>
+{% endif %}

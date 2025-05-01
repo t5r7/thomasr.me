@@ -2,15 +2,11 @@ title: ThomasR.me
 description: "✌🏻 Personal website of Thomas 'Tom' Robinson"
 image: /static/img/blondtommodrawing-500.jpg
 
-baseurl: "" # no trailing slash
+baseurl: "/"
 url: https://thomasr.me
 locale: en_GB
 
 permalink: /:title/
-
-sass:
-  sass_dir: static/css
-  style: compressed
 
 highlighter: rouge
 

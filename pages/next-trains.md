@@ -1,8 +1,6 @@
 ---
 layout: default
 title: "Next Trains"
-metadescription: "A Google Assistant Action to fetch British railway station departures"
-image: "next-trains.jpg"
 permalink: /next-trains/
 ---
 

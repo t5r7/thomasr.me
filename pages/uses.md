@@ -1,17 +1,17 @@
 ---
 layout: default
 title: "What I Use"
-description: "Hardware, Software & Services"
 permalink: "/uses/"
 ---
 
-Inspired by [uses.tech](https://uses.tech/), here's my (not very interesting) contribution, last updated in {{ page.last_modified_at | date: '%B %Y' }}.
+Inspired by [uses.tech](https://uses.tech/), here's my contribution.
 
 ---
 
 ## Pockets, EDC
 - iPhone 13 Pro
 - Apple Watch Series 7
+- Garmin Vivomove Sport (for less smartwatch-appropriate occasions)
 - Airpods Pro 2
 - Rovyvon E1 torch
 - Fjalraven Raven 20L backpack
@@ -20,7 +20,7 @@ Inspired by [uses.tech](https://uses.tech/), here's my (not very interesting) co
 ## Desk (under and on top)
 - Ten-year-old desktop (i7&nbsp;4790k, 16GB, GTX 970), running PopOS and Windows&nbsp;10
 - Dell 'New' XPS 13 (i7&nbsp;1250U, 16GB), running Windows&nbsp;11
-- ThinkPad X280 (i5&nbsp;8350U, 8GB), running whatever Linux distro looks fun
+- ThinkPad X280 (i5&nbsp;8350U, 8GB), running Fedora KDE
 - Logitech MX Master 3 (main), Steelseries Rival 3 (gaming, portable)
 - Keychron K8 Pro (RGB, ISO), with stock keycaps and Kailh Super Speed switches ([MonkeyType](https://monkeytype.com/profile/tmr))
 - Sennheiser HD 58X Jubilee with Fosi DAC-Q4 (headphones, DAC)
@@ -42,6 +42,7 @@ Inspired by [uses.tech](https://uses.tech/), here's my (not very interesting) co
 - Shelf of old phones (their poor batteries...)
 
 ## Software
+- Zed (Custom OLED theme)
 - VS Code (Comic Code, Gruvbox)
 - Obsidian
 - Thunderbird
@@ -51,11 +52,11 @@ Inspired by [uses.tech](https://uses.tech/), here's my (not very interesting) co
 - Hetzner
 - Vercel
 - GitHub
-- Self-Hosted GitLab
+- Self-Hosted Gitea
 - Cloudflare
 - Porkbun
 - Migadu
 
-Of course I am always trying new things, and this is not an exhaustive list.
+---
 
-Apologies that this is not very interesting!
+Of course I am always trying new things, and this is not an exhaustive list.
