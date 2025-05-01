@@ -4,6 +4,8 @@
     --accent: hsl(320, 100%, 30%);
 
     --fonts: "Atkinson Hyperlegible", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+
+    --link-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-bottom-color 0.15s ease-in-out;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -11,6 +13,12 @@
         --bg: hsl(200, 100%, 5%);
         --fg: hsl(200, 100%, 95%);
         --accent: hsl(320, 100%, 90%);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    :root {
+        --link-transition: none;
     }
 }
 
@@ -24,6 +32,18 @@ body {
     @media (max-width: 750px) {
         font-size: 1.3rem;
     }
+}
+
+body::before {
+    content: "";
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: .5rem;
+    background-color: var(--accent);
+    z-index: 9999;
 }
 
 header,
@@ -55,16 +75,18 @@ header#site-header {
         color: inherit;
         text-decoration: none;
 
+
         span {
             color: var(--accent);
             font-weight: 600;
+            transition: var(--link-transition);
         }
-    }
 
-    a:hover span,
-    a:focus span {
-        background-color: var(--fg);
-        color: var(--bg);
+        &:hover span,
+        &:focus span {
+            background-color: var(--accent);
+            color: var(--bg);
+        }
     }
 }
 
@@ -73,13 +95,15 @@ main {
         color: var(--accent);
         border-bottom: .1rem solid var(--accent);
         text-decoration: none;
-    }
 
-    a:hover,
-    a:focus {
-        color: var(--bg);
-        background-color: var(--fg);
-        border-bottom-color: transparent;
+        transition: var(--link-transition);
+
+        &:hover,
+        &:focus {
+            color: var(--bg);
+            background-color: var(--accent);
+            border-bottom-color: transparent;
+        }
     }
 
     ul {
@@ -109,16 +133,10 @@ footer {
     margin-top: 2rem;
     font-size: .8rem;
     text-align: center;
-}
 
-aside#colour-bar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: .5rem;
-    background-color: var(--accent);
-    z-index: 9999;
+    p {
+        cursor: default;
+    }
 }
 
 /*
