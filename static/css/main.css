@@ -1,6 +1,5 @@
 :root {
     --bg: hsl(200, 100%, 95%);
-    --bg-alt: hsl(200, 100%, 90%);
     --fg: hsl(200, 100%, 5%);
     --accent: hsl(320, 100%, 30%);
 
@@ -10,7 +9,6 @@
 @media (prefers-color-scheme: dark) {
     :root {
         --bg: hsl(200, 100%, 5%);
-        --bg-alt: hsl(200, 100%, 15%);
         --fg: hsl(200, 100%, 95%);
         --accent: hsl(320, 100%, 90%);
     }
@@ -24,7 +22,7 @@ body {
     padding: 1rem;
 
     @media (max-width: 750px) {
-        font-size: 1.4rem;
+        font-size: 1.3rem;
     }
 }
 
@@ -38,14 +36,14 @@ footer {
 
 header#site-header {
     margin: 1rem auto;
-    border-bottom: .25rem solid var(--bg-alt);
 
     h1 {
         margin: 0;
         font-size: 2rem;
+        font-weight: 600;
 
         span {
-            font-weight: normal;
+            font-weight: normal
         }
     }
 
@@ -59,6 +57,7 @@ header#site-header {
 
         span {
             color: var(--accent);
+            font-weight: 600;
         }
     }
 
@@ -96,7 +95,13 @@ main {
         height: .15rem;
         width: 80%;
         margin: 1.5rem auto;
-        background-color: var(--bg-alt);
+        background-color: var(--accent);
+    }
+}
+
+article {
+    header h2 {
+        font-weight: 800;
     }
 }
 
@@ -112,7 +117,7 @@ aside#colour-bar {
     left: 0;
     width: 100%;
     height: .5rem;
-    background-color: var(--bg-alt);
+    background-color: var(--accent);
     z-index: 9999;
 }
 
