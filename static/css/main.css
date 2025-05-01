@@ -3,7 +3,7 @@
     --fg: hsl(200, 100%, 5%);
     --accent: hsl(320, 100%, 30%);
 
-    --fonts: "Atkinson Hyperlegible", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    --fonts: "Atkinson Hyperlegible Next", "Atkinson Hyperlegible", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 
     --link-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-bottom-color 0.15s ease-in-out;
 }
@@ -30,7 +30,7 @@ body {
     padding: 1rem;
 
     @media (max-width: 750px) {
-        font-size: 1.3rem;
+        font-size: 1.25rem;
     }
 }
 
