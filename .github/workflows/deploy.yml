@@ -23,6 +23,7 @@ jobs:
         SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
         SOURCE: "./_site/"
         REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
+        REMOTE_PORT: 222
         REMOTE_USER: ${{ secrets.REMOTE_USER }}
         TARGET: ${{ secrets.TARGET }}
         
