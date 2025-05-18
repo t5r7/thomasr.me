@@ -48,7 +48,7 @@ Inspired by [uses.tech](https://uses.tech/), here's my contribution.
 - Thunderbird
 
 ## Infrastructure, Hosting, etc
-- My [homelab](/lab)
+- My [homelab]({{site.baseurl}}/lab)
 - Hetzner
 - Vercel
 - GitHub

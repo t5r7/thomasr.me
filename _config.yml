@@ -2,7 +2,7 @@ title: ThomasR.me
 description: "✌🏻 Personal website of Thomas 'Tom' Robinson"
 image: /static/img/blondtommodrawing-500.jpg
 
-baseurl: "/"
+baseurl: "" # no leading slash
 url: https://thomasr.me
 locale: en_GB
 

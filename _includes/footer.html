@@ -1,5 +1,5 @@
 <footer>
-    <p>💖</p>
+    <p><a href="{{ site.baseurl}}/colophon" title="Colophon" aria>💖</a></p>
 </footer>
 
 {% if page.url == site.baseurl %}
@@ -7,7 +7,7 @@
 function setHomepageGreeting() {
   const title = document.querySelector('header h1');
   const oldGreeting = 'Hello';
-  let newGreeting = 'Hello';
+  let newGreeting = oldGreeting;
 
   const h = new Date().getHours();
   if (h >= 0 && h < 12) newGreeting = "Good&nbsp;Morning"; // 5-12

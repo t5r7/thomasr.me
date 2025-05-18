@@ -137,6 +137,16 @@ footer {
     p {
         cursor: default;
     }
+
+    a {
+        text-decoration: none;
+        color: var(--accent);
+
+        &:hover {
+            color: var(--bg);
+            background-color: var(--accent);
+        }
+    }
 }
 
 /*

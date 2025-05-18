@@ -17,7 +17,7 @@ ul span[aria-hidden="true"] { display: inline-block; font-size: 1.2em; margin-ri
 <!-- comment to force new list -->
 
 * <span aria-hidden="true">👨‍💻</span> I babysit a [homelab]({{site.baseurl}}lab); a true menagerie of devices and technologies for tinkering with.
-* <span aria-hidden="true">📷</span> I take some nice photos sometimes, which often end up on [Flickr](https://www.flickr.com/people/imtom/).
+* <span aria-hidden="true">📷</span> I take some nice photos from my [travels]({{site.baseurl}}/journeys) sometimes, which often end up on [Flickr](https://www.flickr.com/people/imtom/).
 * <span aria-hidden="true">🥾</span> I enjoy hiking and rambling, and recently I've started running. Hold me accountable on [Strava](https://www.strava.com/athletes/93454796).
 
 <!-- comment to force new list -->
