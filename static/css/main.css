@@ -91,6 +91,18 @@ header#site-header {
 }
 
 main {
+
+    h1,
+    h2,
+    h3,
+    h4 {
+        margin-bottom: 0em;
+
+        &:not(:first-child) {
+            margin-top: 1.5rem;
+        }
+    }
+
     a {
         color: var(--accent);
         border-bottom: .1rem solid var(--accent);

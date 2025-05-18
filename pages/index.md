@@ -5,7 +5,7 @@ permalink: /
 ---
 
 <style>
-ul { list-style: none !important; padding: 0; margin-bottom: 1em; }
+ul { list-style: none !important; padding: 0; margin-bottom: 1.5em; }
 ul span[aria-hidden="true"] { display: inline-block; font-size: 1.2em; margin-right: .25em; }
 </style>
 
