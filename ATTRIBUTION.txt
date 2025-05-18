@@ -1,32 +1,5 @@
-ThomasR.me Attribution, last updated 2025-05-01
-===============================================
+ThomasR.me Attribution...
+=========================
+...has moved!
 
-LICENCE
-	Source code released under CC-BY-SA-4.0, except where noted below.
-	See LICENSE.txt for more information.
-	https://github.com/t5r7/thomasr.me
-
-CONTRIBUTORS
-	See https://github.com/t5r7/thomasr.me/graphs/contributors
-
-ARCHIVE
-	Previous versions of the site—and many that have come before it—are available on-request.
-	If you're a curious friend of mine, you likely already have access to the graveyard.
-
-AI DECLARATION
-	No substantial part of this site has been generated using AI. Portions of AI-generated code are marked as such.
-
-DEPLOYMENT
-	This site is built with Jekyll, on GitHub Actions. It is deployed to a Hetzner VPS, proudly ARM-powered using NGINX.
-	I would like to thank Sebastian Wild for his post about setting up this process: https://www.swild.dev/self-hosting/github-jekyll-build-deploy-action/
-
-
-========================
-FONTS
-========================
-
-Atkinson Hyperlegible Next font
-	Designed by Braille Institute, Applied Design Works, Letters From Sweden,
-	Elliott Scott, Megan Eiswerth, Linus Boman, Theodore Petrosky
-	https://brailleinstitute.org/freefont
-	https://fonts.google.com/specimen/Atkinson+Hyperlegible+Next
+Please see https://thomasr.me/colophon for the latest version of this file, along with information about the website.
