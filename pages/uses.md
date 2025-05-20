@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "What I Use"
-permalink: "/uses/"
+title: Things I Use
+permalink: /uses/
 ---
 
 Inspired by [uses.tech](https://uses.tech/), here's my contribution.

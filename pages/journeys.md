@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Journey Logging
-permalink: /journeys
+permalink: /journeys/
 ---
 
 Trains! Statistics! Planes! Maps! Ferries! Graphs!

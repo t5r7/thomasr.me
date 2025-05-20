@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Colophon
-permalink: /colophon
+permalink: /colophon/
 ---
 
 Last updated 2025-05-18.
