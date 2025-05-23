@@ -8,7 +8,7 @@ Inspired by [uses.tech](https://uses.tech/), here's my contribution.
 
 ---
 
-## Pockets, EDC
+### Pockets, EDC
 - iPhone 13 Pro
 - Apple Watch Series 7
 - Garmin Vivomove Sport (for less smartwatch-appropriate occasions)
@@ -17,7 +17,7 @@ Inspired by [uses.tech](https://uses.tech/), here's my contribution.
 - Fjalraven Raven 20L backpack
 - Fjalraven Vardag Duffel 30L
 
-## Desk (under and on top)
+### Desk (under and on top)
 - Ten-year-old desktop (i7&nbsp;4790k, 16GB, GTX 970), running PopOS and Windows&nbsp;10
 - Dell 'New' XPS 13 (i7&nbsp;1250U, 16GB), running Windows&nbsp;11
 - ThinkPad X280 (i5&nbsp;8350U, 8GB), running Fedora KDE
@@ -41,13 +41,13 @@ Inspired by [uses.tech](https://uses.tech/), here's my contribution.
 - Gateway GP6-350 (in bits, maybe broken, but here in spirit)
 - Shelf of old phones (their poor batteries...)
 
-## Software
+### Software
 - Zed (Custom OLED theme)
 - VS Code (Comic Code, Gruvbox)
 - Obsidian
 - Thunderbird
 
-## Infrastructure, Hosting, etc
+### Infrastructure, Hosting, etc
 - My [homelab]({{site.baseurl}}/lab)
 - Hetzner
 - Vercel
