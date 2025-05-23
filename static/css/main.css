@@ -139,6 +139,12 @@ article {
     header h2 {
         font-weight: 800;
     }
+
+    p {
+        margin-top: 0.5rem;
+        margin-bottom: 1rem;
+        line-height: 1.45em;
+    }
 }
 
 footer {
