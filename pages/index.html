@@ -5,9 +5,30 @@ permalink: /
 ---
 
 <style>
-ul { list-style: none !important; padding: 0; margin-top: 0; margin-bottom: 1.5em; }
-ul :not(a) > span[aria-hidden="true"] { display: inline-block; font-size: 1.2em; margin-right: .25em; }
-section:target { margin: 2rem 0; padding: 0 1rem; padding-top: 1.5rem; background-color: #0001; border: 1px solid var(--accent); border-radius: 4px; }
+:root {
+    --width: 30rem;
+}
+
+section {
+    text-align: justify;
+    text-justify: inter-cluster;
+}
+
+p {
+    line-height: 1.5;
+}
+
+p:not(:first-of-type) {
+    margin: 2rem 0;
+}
+
+section:target {
+    margin: 2rem 0;
+    padding: 0 1rem;
+    background-color: #0001;
+    border: 1px solid var(--accent);
+    border-radius: 4px;
+}
 
 @media (prefers-color-scheme: dark) {
   section:target { background-color: #fff1; }
@@ -15,51 +36,21 @@ section:target { margin: 2rem 0; padding: 0 1rem; padding-top: 1.5rem; backgroun
 </style>
 
 <section id="about">
-<ul>
-  <li>
-      <span aria-hidden="true">🎓</span>
-      Currently pursuing a degree in <a href="https://www.port.ac.uk/study/courses/undergraduate/bsc-hons-computer-networks-and-security">Computer&nbsp;Networks&nbsp;&&nbsp;Security</a>.
-  </li>
-  <li>
-      <span aria-hidden="true">🇬🇧</span>
-      From Birmingham, studying at the University&nbsp;of&nbsp;Portsmouth, but&hellip;
-  </li>
-  <li>
-      <span aria-hidden="true">💸</span>
-      &hellip;imminently starting a year-long placement as a Network Operations Analyst in London.
-  </li>
-  <li>
-      <span aria-hidden="true">👔</span>
-      You can find my professional profile on <a href="https://linkedin.com/in/t5r7">LinkedIn</a>, or get in touch for my CV.
-  </li>
-</ul>
+<p>
+    Currently studying a <a href="https://www.port.ac.uk/study/courses/undergraduate/bsc-hons-computer-networks-and-security">degree</a> in Computer Networks &amp; Security at the University of Portsmouth.
+</p>
 
-<ul>
-  <li>
-      <span aria-hidden="true">👨‍💻</span>
-      I babysit a <a href="{{site.baseurl}}lab">homelab</a>; a true menagerie of devices and technologies for tinkering with.
-  </li>
-  <li>
-      <span aria-hidden="true">📷</span>
-      I take some nice photos, often on my <a href="{{site.baseurl}}/travel">travels</a>, which sometimes end up on <a href="https://www.flickr.com/people/imtom/">Flickr</a>.
-  </li>
-  <li>
-      <span aria-hidden="true">🥾</span>
-      I enjoy getting outside and hiking/rambling/running; hold me accountable on <a href="https://www.strava.com/athletes/93454796">Strava</a>.
-  </li>
-  <li>
-      <span aria-hidden="true">👀</span>
-      Judge my taste in <a href="https://www.last.fm/user/itsmeimtom"><span aria-hidden="true">🎶</span> music</a>, <a href="https://www.setlist.fm/user/imtom"><span aria-hidden="true">🎸</span> gigs</a>, <a href="https://letterboxd.com/yyom"><span aria-hidden="true">📽️</span> films</a>, and <a href="https://www.goodreads.com/yyom"><span aria-hidden="true">📚</span> books</a>.
-  </li>
-</ul>
+<p>
+    Imminently starting an internship as a Network Operations Analyst in London. Get in touch for my CV, or check out my <a href="https://linkedin.com/in/t5r7">LinkedIn</a> profile for some corporate waffle and various things I've gotten up to.
+</p>
+
+<p>
+    I babysit an interesting <a href="{{site.baseurl}}lab">homelab</a>, and sometimes take some nice <a href="https://www.flickr.com/people/imtom/">photographs</a>. My attempts to be active outdoors are on <a href="https://www.strava.com/athletes/93454796">Strava</a>, and you can judge my music taste on <a href="https://www.last.fm/user/itsmeimtom">last.fm</a>, should you wish. I also like <a href="https://yom.railmiles.me/">trains</a> and <a href="{{ site.baseurl }}travel">travel</a>.
+</p>
 </section>
 
 <section id="contact">
-<ul>
-    <li>
-        <span aria-hidden="true">📨</span>
-        My ROT-13 encoded email address is <em>gbz@GbzE.zr</em>
-        <span style="font-size: 0.8em">PGP: <a href="https://keys.openpgp.org/vks/v1/by-fingerprint/AAE3375755B3B3F9BDDA32FCF37203ADC98280D6">F372 03AD C982 80D6</a></span>.
-    </li>
-</ul>
+<p>
+    My ROT-13 encoded email address is <em>gbz@GbzE.zr</em>
+    <span style="font-size: 0.8em"><a title="F372 03AD C982 80D6" href="https://keys.openpgp.org/vks/v1/by-fingerprint/AAE3375755B3B3F9BDDA32FCF37203ADC98280D6">PGP</a></span>.</p>
 </section>

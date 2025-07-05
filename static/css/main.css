@@ -3,9 +3,9 @@
     --fg: hsl(200, 100%, 5%);
     --accent: hsl(320, 100%, 30%);
 
-    --fonts: "Atkinson Hyperlegible Next", "Atkinson Hyperlegible", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    --width: 50rem;
 
-    --link-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-bottom-color 0.15s ease-in-out;
+    --fonts: "Atkinson Hyperlegible Next", "Atkinson Hyperlegible", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -16,11 +16,6 @@
     }
 }
 
-@media (prefers-reduced-motion: reduce) {
-    :root {
-        --link-transition: none;
-    }
-}
 
 body {
     background-color: var(--bg);
@@ -49,7 +44,7 @@ body::before {
 header,
 main,
 footer {
-    max-width: 50rem;
+    max-width: var(--width);
     margin: 0 auto;
     text-justify: distribute;
 }
@@ -79,7 +74,6 @@ header#site-header {
         span {
             color: var(--accent);
             font-weight: 600;
-            transition: var(--link-transition);
         }
 
         &:hover span,
@@ -105,16 +99,13 @@ main {
 
     a {
         color: var(--accent);
-        border-bottom: .1rem solid var(--accent);
-        text-decoration: none;
-
-        transition: var(--link-transition);
+        text-decoration: underline;
 
         &:hover,
         &:focus {
             color: var(--bg);
             background-color: var(--accent);
-            border-bottom-color: transparent;
+            text-decoration: none;
         }
     }
 

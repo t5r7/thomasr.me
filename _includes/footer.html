@@ -5,18 +5,14 @@
 {% if page.url == '/' %}
 <script defer>
 function setHomepageGreeting() {
-  const title = document.querySelector('header h1');
-  const oldGreeting = 'Hello';
-  let newGreeting = oldGreeting;
+  const greeting = document.querySelector('#greeting');
+  if(!greeting) return;
 
   const h = new Date().getHours();
-  if (h >= 0 && h < 12) newGreeting = "Good&nbsp;Morning"; // 5-12
-  if (h >= 12 && h < 18) newGreeting = "Good&nbsp;Afternoon"; // 12-18
-  if (h >= 18 && h < 22) newGreeting = "Good&nbsp;Evening"; // 18-22
-  if (h >= 22) newGreeting = "Good&nbsp;Evening"; // 22-23
-
-  if(oldGreeting === newGreeting) return;
-  title.innerHTML = title.innerHTML.replace(oldGreeting, newGreeting);
+  if (h >= 0 && h < 12) greeting.innerText = 'Good morning'; // 5-12
+  if (h >= 12 && h < 18) greeting.innerText = 'Good afternoon'; // 12-18
+  if (h >= 18 && h < 22) greeting.innerText = 'Good evening'; // 18-22
+  if (h >= 22) greeting.innerText = 'Good evening'; // 22-23
 }
 
 setHomepageGreeting();
