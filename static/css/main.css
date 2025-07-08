@@ -58,7 +58,12 @@ header#site-header {
         font-weight: 600;
 
         span {
-            font-weight: normal
+            font-weight: normal;
+        }
+
+        span#pronouns {
+            font-size: 1rem;
+            color: var(--accent);
         }
     }
 
