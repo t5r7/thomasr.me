@@ -29,7 +29,7 @@ body {
     }
 }
 
-body::before {
+/*body::before {
     content: "";
     display: block;
     position: fixed;
@@ -39,7 +39,7 @@ body::before {
     height: .5rem;
     background-color: var(--accent);
     z-index: 9999;
-}
+}*/
 
 header,
 main,
