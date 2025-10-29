@@ -1,9 +1,17 @@
 # ThomasR.me
 
-This is the source code for my site, nothing much of note. 
+This is the source code for my site, nothing much of note.
 
 Jekyll is the static site generator, mainly out of tradition at this point.
 
 The site is deployed to a Hetzner VPS, proudly ARM-based and running NGINX. GitHub Actions builds the site and deploys it to the server. I used to use Vercel, but serverless is no fun ;)
 
-Except when [noted otherwise](ATTRIBUTION.txt), content in this repo is available under the [CC-BY-SA-4.0 license](LICENSE.txt). Please do let me know if you've done something interesting with any of this terrible code/content :)
+Previous versions of the site—and many that have come before it—are available on-request. If you’re a curious friend of mine, you likely already have access to the graveyard.
+
+## Attribution
+No substantial part of this site has been generated using AI. Portions of AI-generated code are marked as such.
+
+### Font
+**[Atkinson Hyperlegible Next](https://brailleinstitute.org/freefont)** by
+
+Braille Institute, Applied Design Works, Elliott Scott, Megan Eiswerth, Letters From Sweden, Linus Boman, Theodore Petrosky.
