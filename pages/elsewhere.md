@@ -13,10 +13,11 @@ permalink: /elsewhere/
 * [Strava](https://www.strava.com/athletes/93454796) - Attempts at running, not as successful as I'd like
 * [Monkeytype](https://monkeytype.com/profile/tmr) - Clickety clack
 
-### Music
+### Music & Film
 * [last.fm](https://www.last.fm/user/itsmeimtom) - Judge my music taste and listening habits
 * [setlist.fm](https://www.setlist.fm/user/imtom) - Judge the gigs I've spent too much to attend
 * [Discogs](https://www.discogs.com/user/yyom/collection) - Judge the CDs I keep on a shelf
+* [Letterboxd](https://letterboxd.com/yyom/) - Judge the films I've watched (or rather, the ones still I haven't yet)
 
 ### Travel & Journey Logging
 See [this page]({{site.baseurl}}/travel) for links.
