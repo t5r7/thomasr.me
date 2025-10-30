@@ -10,13 +10,7 @@ permalink: /:title/
 
 sass:
   style: expanded
-  load_paths:
-    - static/css
-
-compress_html:
-  blanklines: true
-  # ignore:
-  #   envs: ["development"]
+  sourcemap: development
 
 plugins:
   - jekyll-sitemap
