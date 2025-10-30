@@ -1,3 +1,6 @@
+---
+---
+
 :root {
     --bg: hsl(200, 100%, 95%);
     --fg: hsl(200, 100%, 5%);
@@ -5,7 +8,8 @@
 
     --width: 50rem;
 
-    --fonts: "Atkinson Hyperlegible Next", "Atkinson Hyperlegible", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    --fonts-body: Charter, 'Bitstream Charter', 'Sitka Text', Cambria, serif;
+    --fonts-supplemental: Seravek, 'Gill Sans Nova', Ubuntu, Calibri, 'DejaVu Sans', source-sans-pro, sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -20,7 +24,7 @@
 body {
     background-color: var(--bg);
     color: var(--fg);
-    font-family: var(--fonts);
+    font-family: var(--fonts-body);
     font-size: 1.1rem;
     padding: 1rem;
 
@@ -28,18 +32,6 @@ body {
         font-size: 1.25rem;
     }
 }
-
-/*body::before {
-    content: "";
-    display: block;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: .5rem;
-    background-color: var(--accent);
-    z-index: 9999;
-}*/
 
 header,
 main,
@@ -51,6 +43,7 @@ footer {
 
 header#site-header {
     margin: 1rem auto;
+    font-family: var(--fonts-supplemental);
 
     h1 {
         margin: 0;
@@ -144,45 +137,23 @@ article {
 }
 
 footer {
-    margin-top: 2rem;
-    font-size: .8rem;
-    text-align: center;
-
-    p {
+    pre#ascii-art {
+        font-family: monospace;
+        line-height: 1.25em;
+        font-size: 1.5vw;
+        position: fixed;
+        bottom: env(safe-area-inset-bottom, 1vh);
+        left: 50%;
+        transform: translateX(-50%);
+        margin: 0;
+        z-index: -1;
+        opacity: 0.025;
         cursor: default;
-    }
-
-    a {
-        text-decoration: none;
-        color: var(--accent);
+        user-select: none;
+        transition: opacity 0.3s ease-in-out;
 
         &:hover {
-            color: var(--bg);
-            background-color: var(--accent);
+            opacity: 0.1;
         }
     }
 }
-
-/*
-aside#bg-image {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-    z-index: -1;
-    opacity: 0.3;
-
-    @media (min-width: 750px) {
-        background-image: url("/static/img/blondtommodrawing-1000.jpg");
-        background-image: url("/static/img/blondtommodrawing-1000.webp");
-    }
-
-    @media (max-width: 750px) {
-        background-image: url("/static/img/blondtommodrawing-500.jpg");
-        background-image: url("/static/img/blondtommodrawing-500.webp");
-    }
-}
-*/

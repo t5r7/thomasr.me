@@ -8,7 +8,10 @@ locale: en_GB
 
 permalink: /:title/
 
-highlighter: rouge
+sass:
+  style: expanded
+  load_paths:
+    - static/css
 
 compress_html:
   blanklines: true
