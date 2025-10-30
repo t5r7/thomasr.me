@@ -1,6 +1,8 @@
 ---
 ---
 
+@use 'ak-next';
+
 :root {
     --bg: hsl(200, 100%, 95%);
     --fg: hsl(200, 100%, 5%);
@@ -8,8 +10,7 @@
 
     --width: 50rem;
 
-    --fonts-body: Charter, 'Bitstream Charter', 'Sitka Text', Cambria, serif;
-    --fonts-supplemental: Seravek, 'Gill Sans Nova', Ubuntu, Calibri, 'DejaVu Sans', source-sans-pro, sans-serif;
+    --fonts: "Atkinson Hyperlegible Next", "Atkinson Hyperlegible", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -20,11 +21,10 @@
     }
 }
 
-
 body {
     background-color: var(--bg);
     color: var(--fg);
-    font-family: var(--fonts-body);
+    font-family: var(--fonts);
     font-size: 1.1rem;
     padding: 1rem;
 
@@ -43,7 +43,6 @@ footer {
 
 header#site-header {
     margin: 1rem auto;
-    font-family: var(--fonts-supplemental);
 
     h1 {
         margin: 0;
@@ -122,6 +121,11 @@ main {
         margin: 1.5rem auto;
         background-color: var(--accent);
     }
+
+    em {
+        font-style: normal;
+        color: var(--accent);
+    }
 }
 
 article {
@@ -137,23 +141,8 @@ article {
 }
 
 footer {
-    pre#ascii-art {
-        font-family: monospace;
-        line-height: 1.25em;
-        font-size: 1.5vw;
-        position: fixed;
-        bottom: env(safe-area-inset-bottom, 1vh);
-        left: 50%;
-        transform: translateX(-50%);
-        margin: 0;
-        z-index: -1;
-        opacity: 0.025;
-        cursor: default;
-        user-select: none;
-        transition: opacity 0.3s ease-in-out;
-
-        &:hover {
-            opacity: 0.1;
-        }
-    }
+    margin-top: 2rem;
+    text-align: center;
+    opacity: 0.5;
+    cursor: default;
 }
