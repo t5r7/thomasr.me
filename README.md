@@ -10,8 +10,3 @@ Previous versions of the site—and many that have come before it—are availabl
 
 ## Attribution
 No substantial part of this site has been generated using AI. Portions of AI-generated code are marked as such.
-
-### Font
-**[Atkinson Hyperlegible Next](https://brailleinstitute.org/freefont)** by
-
-Braille Institute, Applied Design Works, Elliott Scott, Megan Eiswerth, Letters From Sweden, Linus Boman, Theodore Petrosky.
