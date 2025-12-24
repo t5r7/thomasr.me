@@ -1,9 +1,10 @@
 {% if page.url == '/' %}
-<header id="site-header">
-    <h1><span aria-hidden="true">👋🏻</span> <span id="greeting">Hello,</span> I'm Tom! <span id="pronouns">he/him</span></h1>
+<header>
+    <h1>Hi, I'm Tom!</h1>
 </header>
 {% else %}
-<header id="site-header">
-    <h1><a title="Back to the homepage of {{ site.title }}" href="{{ site.baseurl }}/"><span aria-hidden="true">&laquo;</span> {{ site.title }}</a></h1>
+<header>
+    <h1><a href="{{ site.baseurl }}/">{{ site.title }}</a></h1>
+    <h2>{{ page.title }}</h2>
 </header>
 {% endif %}
