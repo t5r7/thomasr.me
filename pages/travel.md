@@ -36,6 +36,8 @@ I'm counting 'visited' as spending a reasonable amount of time in a country, not
 13. <span aria-hidden="true">🇸🇪</span> Sweden
 14. <span aria-hidden="true">🇮🇹</span> Italy
 15. <span aria-hidden="true">🇭🇺</span> Hungary
+15. <span aria-hidden="true">🇭🇰</span> Hong Kong SAR
+16. <span aria-hidden="true">🇲🇴</span> Macao SAR
 
 ## Photography
 Some of my favourite photographs end up on [my Flickr](https://www.flickr.com/people/imtom/), including many from my travels.
