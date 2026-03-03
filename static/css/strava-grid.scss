@@ -1,0 +1,17 @@
+---
+---
+
+:root {
+    --width: 90vw;
+}
+
+article.strava-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+iframe {
+    margin: 1em;
+    display: inline-block;
+}

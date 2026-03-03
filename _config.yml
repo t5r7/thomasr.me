@@ -17,3 +17,15 @@ plugins:
 
 exclude:
   - README.md
+
+collections:
+  outings:
+    layout: default
+    output: true
+    slug: "/outings/:path"
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: "default"
