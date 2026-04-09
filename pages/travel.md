@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Travel & Journey Logging
+description: Visited countries, nerdy train stats
 permalink: /travel/
 ---
 
@@ -38,11 +39,6 @@ I'm counting 'visited' as spending a reasonable amount of time in a country, not
 15. <span aria-hidden="true">🇭🇺</span> Hungary
 15. <span aria-hidden="true">🇭🇰</span> Hong Kong SAR
 16. <span aria-hidden="true">🇲🇴</span> Macao SAR
-
-## Photography
-Some of my favourite photographs end up on [my Flickr](https://www.flickr.com/people/imtom/), including many from my travels.
-
-Once a major hobby, nowadays the phone camera suffices. I like to think the knack for composition and editing remains, even if I'm no longer as obsessed with the gear and technicalities!
 
 ## Journey Logging
 Trains! Statistics! Planes! Maps! Ferries! Graphs! All very cool things, if you ask me.

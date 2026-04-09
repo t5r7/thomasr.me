@@ -1,7 +1,10 @@
 ---
 title: Outings
 permalink: /outings/
+description: Tracking completion of long(ish) distance walks, hikes, etc.
 ---
+
+Tracking completion of long(ish) distance walks, hikes, etc.
 
 <ul>
 {% assign sorted_outings = site.outings | sort: 'year_completed' | reverse %}
