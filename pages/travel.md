@@ -39,6 +39,7 @@ I'm counting 'visited' as spending a reasonable amount of time in a country, not
 15. <span aria-hidden="true">🇭🇺</span> Hungary
 15. <span aria-hidden="true">🇭🇰</span> Hong Kong SAR
 16. <span aria-hidden="true">🇲🇴</span> Macao SAR
+17. <span aria-hidden="true">🇵🇱</span> Poland
 
 ## Journey Logging
 Trains! Statistics! Planes! Maps! Ferries! Graphs! All very cool things, if you ask me.
