@@ -14,7 +14,7 @@ jobs:
       uses: actions/checkout@v2
 
     - name: Build
-      uses: t5r7/jekyll-build-action@540568ef2d66ac4cabc910fcd6f4311c0cae6b9c
+      uses: t5r7/jekyll-build-action@548df14a8377046e913099df956005d11c6a3670
 
     - name: Deploy to Server
       uses: easingthemes/ssh-deploy@v2.1.1
