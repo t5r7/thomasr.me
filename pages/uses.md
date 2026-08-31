@@ -11,16 +11,16 @@ Inspired by [uses.tech](https://uses.tech/), here's my contribution.
 ### Pockets, EDC
 - iPhone 13 Pro
 - Apple Watch Series 7
-- Garmin Vivomove Sport (for less smartwatch-appropriate occasions)
+- Amazfit Helio Strap (for less smartwatch-appropriate occasions)
 - Airpods Pro 2
 - Rovyvon E1 torch
 - Fjalraven Raven 20L backpack
 - Fjalraven Vardag Duffel 30L
 
 ### Desk (under and on top)
+- Dell Latitude 7320 (i7&nbsp;1185G7, 16GB), running Fedora Cosmic
+- ThinkPad X280 (i5&nbsp;8350U, 8GB), running Fedora Sway
 - Ten-year-old desktop (i7&nbsp;4790k, 16GB, GTX 970), running PopOS and Windows&nbsp;10
-- Dell 'New' XPS 13 (i7&nbsp;1250U, 16GB), running Windows&nbsp;11
-- ThinkPad X280 (i5&nbsp;8350U, 8GB), running Fedora KDE
 - Logitech MX Master 3 (main), Steelseries Rival 3 (gaming, portable)
 - Keychron K8 Pro (RGB, ISO), with stock keycaps and Kailh Super Speed switches ([MonkeyType](https://monkeytype.com/profile/tmr))
 - Sennheiser HD 58X Jubilee with Fosi DAC-Q4 (headphones, DAC)
@@ -29,6 +29,7 @@ Inspired by [uses.tech](https://uses.tech/), here's my contribution.
 - Dell 27" 1440p 165hz "Gaming" Monitor
 
 ### Hoard of old devices
+- Dell 'New' XPS 13 (i7&nbsp;1250U, 16GB, works about 30% of the time)
 - Thinkpad X220
 - Early 2008 Macbook
 - Asus Vivobook X556
@@ -42,15 +43,15 @@ Inspired by [uses.tech](https://uses.tech/), here's my contribution.
 - Shelf of old phones (their poor batteries...)
 
 ### Software
-- Zed (Custom OLED theme)
+- Firefox
+- Zed
 - VS Code (Comic Code, Gruvbox)
-- Obsidian
 - Thunderbird
+- Darktable
 
 ### Infrastructure, Hosting, etc
 - My [homelab]({{site.baseurl}}/lab)
 - Hetzner
-- Vercel
 - GitHub
 - Self-Hosted Gitea
 - Cloudflare
