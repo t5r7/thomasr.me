@@ -1,4 +1,5 @@
 ---
+layout: none
 ---
 {% if jekyll.environment != "production" %}# This is not a production site.
 User-Agent: *
